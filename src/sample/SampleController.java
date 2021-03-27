@@ -32,9 +32,7 @@ public class SampleController {
            TestController controller = loader.getController();
             for(int i=0;i<100;i++){
 
-                Button button = new Button(""+i);
-                button.setPrefSize(100,100);
-                controller.box.getChildren().add(button);
+
 
             }
 
