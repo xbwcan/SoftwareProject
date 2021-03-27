@@ -31,9 +31,9 @@ public class SampleController {
 
            TestController controller = loader.getController();
             for(int i=0;i<50;i++){
+
                 Button button = new Button(""+i);
-                button.setLayoutX(100);
-                button.setLayoutY(100);
+                button.setPrefSize(100,100);
                 controller.box.getChildren().add(button);
 
             }
