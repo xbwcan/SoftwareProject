@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SampleController {
+public class LoginController {
 
     public TextField nameTextField;
     public TextField passwordTextField;
@@ -22,14 +22,16 @@ public class SampleController {
        if(true){
 
            FXMLLoader loader = new FXMLLoader();
-           loader.setLocation(getClass().getResource("test.fxml"));
+           loader.setLocation(getClass().getResource("ClientMainScene.fxml"));
            Parent afterLoginParent = loader.load();
            Scene afterLoginScene = new Scene(afterLoginParent);
            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
            window.setScene(afterLoginScene);
 
 
-           TestController controller = loader.getController();
+/*
+           ClientMainSceneController controller = loader.getController();
+          // controller.client =
             for(int i=0;i<50;i++){
 
                 Button button = new Button(""+i);
@@ -38,7 +40,7 @@ public class SampleController {
 
             }
 
-
+*/
            window.show();
        }
 
