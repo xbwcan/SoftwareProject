@@ -10,7 +10,7 @@ import javafx.stage.PopupWindow;
 
 import java.io.IOException;
 
-public class SceneForClass {
+public class ClassSceneController {
     public Tab introTag;
     public TabPane tabPane;
     Course course;
@@ -27,7 +27,7 @@ public class SceneForClass {
         introTag.setContent(controller.pane);
         controller.textForPlanInfo.setText(course.getIntro());
 
-        for(int i=0;i<course.day;i++){
+        for(int i=0;i<course.plan.size();i++){
 
             loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("SceneForClassesPlan.fxml"));

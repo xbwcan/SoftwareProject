@@ -28,19 +28,6 @@ public class LoginController {
            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
            window.setScene(afterLoginScene);
 
-
-/*
-           ClientMainSceneController controller = loader.getController();
-          // controller.client =
-            for(int i=0;i<50;i++){
-
-                Button button = new Button(""+i);
-                button.setPrefSize(100,100);
-                controller.box.getChildren().add(button);
-
-            }
-
-*/
            window.show();
        }
 
