@@ -1,7 +1,9 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -9,6 +11,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -18,6 +21,7 @@ public class LiveSceneController {
     public Tab introTag;
     public Course course;//should be Live Session
     public TabPane tabPane;
+    public Scene previousScene;
 
     @FXML
     public void initialize() {
@@ -52,5 +56,16 @@ public class LiveSceneController {
             tabPane.getTabs().add(tab);
 
         }
+    }
+
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+
+
+        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        ClientMainSceneController controller = (ClientMainSceneController) previousScene.getUserData();
+        controller.updateClassesInMyClass();
+        controller.updateClassesInMainPage();
+        window.setScene(previousScene);
+
     }
 }

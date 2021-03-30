@@ -27,7 +27,8 @@ public class LoginController {
            Scene afterLoginScene = new Scene(afterLoginParent);
            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
            window.setScene(afterLoginScene);
-
+           ClientMainSceneController controller = loader.getController();
+           afterLoginScene.setUserData(controller);
            window.show();
        }
 

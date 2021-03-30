@@ -63,7 +63,7 @@
             </TextArea>
          </children>
       </VBox>
-      <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="Go Back" />
+      <Button layoutX="-11.0" layoutY="-1.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="30.0" prefWidth="95.0" text="Go Back" />
       <Label fx:id="liveSessionNameLabel" layoutX="95.0" layoutY="45.0" prefHeight="23.0" prefWidth="232.0" text="Live Session Name: xxx">
          <font>
             <Font size="18.0" />

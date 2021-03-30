@@ -46,9 +46,24 @@
                         <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="134.0" prefWidth="450.0">
                            <children>
                               <ChoiceBox fx:id="mainPageFilterType" layoutX="54.0" layoutY="76.0" prefWidth="150.0" />
-                              <Button fx:id="mainPageSearchButton" layoutX="225.0" layoutY="74.0" mnemonicParsing="false" onAction="#mainPageSearchClicked" text="Search" />
-                              <RadioButton fx:id="mainPageClassButton" layoutX="312.0" layoutY="32.0" mnemonicParsing="false" text="Class" />
-                              <RadioButton fx:id="mainPageLiveButton" layoutX="312.0" layoutY="68.0" mnemonicParsing="false" text="Live" />
+                              <Button fx:id="mainPageSearchButton" layoutX="225.0" layoutY="73.0" mnemonicParsing="false" onAction="#mainPageSearchClicked" text="Search">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
+                              <VBox layoutX="321.0" layoutY="50.0" prefHeight="50.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="mainPageClassButton" mnemonicParsing="false" text="Class">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="mainPageLiveButton" mnemonicParsing="false" text="Live">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>
@@ -75,10 +90,25 @@
                         </VBox>
                         <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="149.0" prefWidth="468.0">
                            <children>
-                              <Button fx:id="myClassSearchButton" layoutX="225.0" layoutY="74.0" mnemonicParsing="false" onAction="#myClassSearchClicked" text="Search" />
+                              <Button fx:id="myClassSearchButton" layoutX="225.0" layoutY="74.0" mnemonicParsing="false" onAction="#myClassSearchClicked" text="Search">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
                               <ChoiceBox fx:id="myClassFilterType" layoutX="54.0" layoutY="76.0" prefWidth="150.0" />
-                              <RadioButton fx:id="myClassClassButton" layoutX="312.0" layoutY="32.0" mnemonicParsing="false" text="Class" />
-                              <RadioButton fx:id="myClassLiveButton" layoutX="312.0" layoutY="68.0" mnemonicParsing="false" text="Live" />
+                              <VBox layoutX="319.0" layoutY="50.0" prefHeight="53.0" prefWidth="88.0" spacing="5.0">
+                                 <children>
+                                    <RadioButton fx:id="myClassClassButton" mnemonicParsing="false" text="Class">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="myClassLiveButton" mnemonicParsing="false" text="Live">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>

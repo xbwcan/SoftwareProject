@@ -46,6 +46,8 @@ public class ClientMainSceneController {
     public ChoiceBox myClassFilterType;
     public RadioButton myClassClassButton;
     public RadioButton myClassLiveButton;
+    final ToggleGroup group1 = new ToggleGroup();
+    final ToggleGroup group2 = new ToggleGroup();
 
     // public Label premiumLabel;
     @FXML
@@ -57,14 +59,24 @@ public class ClientMainSceneController {
         mainPageFilterType.getItems().add("Swim");
         myClassFilterType.getItems().add("Yoga");
         myClassFilterType.getItems().add("Swim");
+        mainPageFilterType.setValue(mainPageFilterType.getItems().get(0));
+        myClassFilterType.setValue(myClassFilterType.getItems().get(0));
 
-        final ToggleGroup group1 = new ToggleGroup();
+
         mainPageClassButton.setToggleGroup(group1);
         mainPageLiveButton.setToggleGroup(group1);
+        mainPageLiveButton.setUserData("live");
+        mainPageClassButton.setUserData("class");
 
-        final ToggleGroup group2 = new ToggleGroup();
+
+
         myClassClassButton.setToggleGroup(group2);
         myClassLiveButton.setToggleGroup(group2);
+        myClassLiveButton.setUserData("Live");
+        myClassClassButton.setUserData("class");
+
+        group1.selectToggle(mainPageClassButton);
+        group2.selectToggle(myClassClassButton);
 
         updateClassesInMainPage();
         updateClassesInMyClass();
@@ -73,17 +85,28 @@ public class ClientMainSceneController {
     }
 
     public void updateClassesInMainPage(){
-        ArrayList<Button> buttons = getClassesButtonsForMainPage();
+        mainPageFlowPane.getChildren().clear();
+        ArrayList<Button> buttons;
+        if(group1.getSelectedToggle().getUserData().equals("class"))
+            buttons = getClassesButtonsForMainPage();
+        else
+            buttons = getLiveButtonsForMainPage();
         for(Button button:buttons)
             mainPageFlowPane.getChildren().add(button);
     }
+
     public void updateClassesInMyClass(){
-        ArrayList<Button> buttons = getClassesButtonsForMyClass();
+        myClassFlowPane.getChildren().clear();
+        ArrayList<Button> buttons;
+        if(group2.getSelectedToggle().getUserData().equals("class"))
+            buttons = getClassesButtonsForMyClass();
+        else
+            buttons = getLiveButtonsForMyClass();
         for(Button button:buttons)
             myClassFlowPane.getChildren().add(button);
     }
 
-    EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+    EventHandler<ActionEvent> classButtonClicked = new EventHandler<ActionEvent>() {
         /**
          * this function change to the course page according to the class button clicked.
          * @param actionEvent
@@ -107,12 +130,7 @@ public class ClientMainSceneController {
 
 
             ClassSceneController controller = loader.getController();
-            ArrayList <String> plan = new ArrayList<String>();
-            plan.add("Day1's plan.");
-            plan.add("Day2's plan.");
-            plan.add("Day3's:plan");
-            Course course = new Course("YOGA","PZ",2,plan);
-
+            Course course = (Course)(((Node) actionEvent.getSource()).getUserData());
             controller.course = course;
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
@@ -140,20 +158,12 @@ public class ClientMainSceneController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             Scene classScene = new Scene(classSceneParent);
             Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(classScene);
-
-
             LiveSceneController controller = loader.getController();
-            ArrayList <String> plan = new ArrayList<String>();
-            plan.add("Day1's plan.");
-            plan.add("Day2's plan.");
-            plan.add("Day3's:plan");
-            Course course = new Course("YOGA","PZ",2,plan);
-
-            controller.course = course;
+            controller.course = (Course) (((Node)actionEvent.getSource()).getUserData());
+            controller.previousScene = ((Node)actionEvent.getSource()).getScene();
+            window.setScene(classScene);
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
             } catch (IOException e) {
@@ -163,6 +173,12 @@ public class ClientMainSceneController {
         }
     };
 
+
+    /**
+     * This method return a set of class buttons for Main pages.
+     * details needed to be added --PZ
+     * @return
+     */
     public ArrayList<Button> getClassesButtonsForMainPage() {
         ArrayList<Button> buttons =new ArrayList<Button>();
 
@@ -170,62 +186,133 @@ public class ClientMainSceneController {
             Button button = new Button("Class: "+i);
             button.setPrefSize(120,120);
             //mainPageFlowPane.getChildren().add(button);
-            button.setOnAction(event);
+            button.setOnAction(classButtonClicked);
 
             //add action on class button to show over view
             button.addEventHandler(MouseEvent.MOUSE_ENTERED,
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent e) {
-                            mainPageOverviewText.setText(button.getText());
+                            mainPageOverviewText.setText(((Course)button.getUserData()).getIntro());;
                         }
                     });
+
+            ArrayList <String> plan = new ArrayList<String>();
+            plan.add("Day1's plan.");
+            plan.add("Day2's plan.");
+            plan.add("Day3's:plan");
+            Course course = new Course("Class "+i,"PZ",2,plan);
+
+            button.setUserData(course);//add course object to object
             buttons.add(button);
+
         }
         return buttons;
     }
-    public ArrayList<Button> getClassesButtonsForMyClassPage() {
-        ArrayList<Button> buttons =new ArrayList<Button>();
-
-        for(int i=0;i<20;i++){
-            Button button = new Button("Class: "+i);
-            button.setPrefSize(120,120);
-            //mainPageFlowPane.getChildren().add(button);
-            button.setOnAction(event);
-
-            //add action on class button to show over view
-            button.addEventHandler(MouseEvent.MOUSE_ENTERED,
-                    new EventHandler<MouseEvent>() {
-                        @Override
-                        public void handle(MouseEvent e) {
-                            myClassOverviewText.setText(button.getText());
-                        }
-                    });
-            buttons.add(button);
-        }
-        return buttons;
-    }
+    /**
+     * This method return a set of class buttons for myClass pages.
+     * details needed to be added --PZ
+     * @return
+     */
     public ArrayList<Button> getClassesButtonsForMyClass() {
         ArrayList<Button> buttons =new ArrayList<Button>();
 
         for(int i=0;i<20;i++){
-            Button button = new Button("Class: "+i);
+            Button button = new Button("MyClass: "+i);
             button.setPrefSize(120,120);
             //mainPageFlowPane.getChildren().add(button);
-            button.setOnAction(liveButtonClieked);
+            button.setOnAction(classButtonClicked);
 
+            //add action on class button to show over view
             button.addEventHandler(MouseEvent.MOUSE_ENTERED,
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent e) {
-                            myClassOverviewText.setText(button.getText());
+                            myClassOverviewText.setText(((Course)button.getUserData()).getIntro());;
                         }
                     });
+
+            ArrayList <String> plan = new ArrayList<String>();
+            plan.add("Day1's plan.");
+            plan.add("Day2's plan.");
+            plan.add("Day3's:plan");
+            Course course = new Course("Class "+i,"PZ",2,plan);
+
+            button.setUserData(course);//add course object to object
             buttons.add(button);
 
         }
         return buttons;
     }
+    /**
+     * This method return a set of live buttons for MyClass.
+     * details needed to be added --PZ
+     * @return
+     */
+    public ArrayList<Button> getLiveButtonsForMyClass() {
+        {
+            ArrayList<Button> buttons =new ArrayList<Button>();
+
+            for(int i=0;i<20;i++){
+                Button button = new Button("MyLive: "+i);
+                button.setPrefSize(120,120);
+                //mainPageFlowPane.getChildren().add(button);
+                button.setOnAction(liveButtonClieked);
+                button.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                        new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent e) {
+                                myClassOverviewText.setText(((Course)button.getUserData()).getIntro());
+                            }
+                        });
+
+                ArrayList <String> plan = new ArrayList<String>();
+                plan.add("Day1's plan.");
+                plan.add("Day2's plan.");
+                plan.add("Day3's:plan");
+                Course course = new Course("Live Session "+i,"PZ",2,plan);
+                button.setUserData(course);
+                buttons.add(button);
+
+            }
+            return buttons;
+        }
+    }
+    /**
+     * This method return a set of live buttons for Main pages.
+     * details needed to be added --PZ
+     * @return
+     */
+    public ArrayList<Button> getLiveButtonsForMainPage() {
+        {
+            ArrayList<Button> buttons =new ArrayList<Button>();
+
+            for(int i=0;i<20;i++){
+                Button button = new Button("Live: "+i);
+                button.setPrefSize(120,120);
+                //mainPageFlowPane.getChildren().add(button);
+                button.setOnAction(liveButtonClieked);
+                button.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                        new EventHandler<MouseEvent>() {
+                            @Override
+                            public void handle(MouseEvent e) {
+                                mainPageOverviewText.setText(((Course)button.getUserData()).getIntro());
+                            }
+                        });
+
+                ArrayList <String> plan = new ArrayList<String>();
+                plan.add("Day1's plan.");
+                plan.add("Day2's plan.");
+                plan.add("Day3's:plan");
+                Course course = new Course("Live Session "+i,"PZ",2,plan);
+                button.setUserData(course);
+                buttons.add(button);
+
+            }
+            return buttons;
+        }
+    }
+
 
     public void updateNotice() {
         String s = new String();
@@ -275,13 +362,16 @@ public class ClientMainSceneController {
      * @param actionEvent
      */
     public void mainPageSearchClicked(ActionEvent actionEvent) {
+        updateClassesInMainPage();
     }
+
 
     /**
      * this method get what lessons and types user choose, and show them. It's in MyClasses&Live.
      * @param actionEvent
      */
     public void myClassSearchClicked(ActionEvent actionEvent) {
+        updateClassesInMyClass();
     }
     /**
      *
