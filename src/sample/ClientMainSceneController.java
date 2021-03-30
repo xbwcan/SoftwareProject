@@ -132,6 +132,7 @@ public class ClientMainSceneController {
             ClassSceneController controller = loader.getController();
             Course course = (Course)(((Node) actionEvent.getSource()).getUserData());
             controller.course = course;
+            controller.previousScene = ((Node)actionEvent.getSource()).getScene();
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
             } catch (IOException e) {
