@@ -39,18 +39,23 @@ public class ClientMainSceneController {
             myAccountAgeField.getItems().add(i);
         myAccountAgeField.setValue(20);
 
-
-
-        ArrayList<Button> buttons = getClassesButtonsForMainPage();
-        for(Button button:buttons)
-            mainPageFlowPane.getChildren().add(button);
-
-        buttons = getClassesButtonsForMyClass();
-        for(Button button:buttons)
-            myClassFlowPane.getChildren().add(button);
+        updateClassesInMainPage();
+        updateClassesInMyClass();
 
         updateNotice();
     }
+
+    public void updateClassesInMainPage(){
+        ArrayList<Button> buttons = getClassesButtonsForMainPage();
+        for(Button button:buttons)
+            mainPageFlowPane.getChildren().add(button);
+    }
+    public void updateClassesInMyClass(){
+        ArrayList<Button> buttons = getClassesButtonsForMyClass();
+        for(Button button:buttons)
+            myClassFlowPane.getChildren().add(button);
+    }
+
     EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
         /**
          * this function change to the course page according to the class button clicked.
@@ -61,17 +66,17 @@ public class ClientMainSceneController {
 
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("ClassScene.fxml"));
-            Parent afterLoginParent = null;
+            Parent classSceneParent = null;
 
             try {
-                afterLoginParent = loader.load();
+                classSceneParent = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            Scene afterLoginScene = new Scene(afterLoginParent);
+            Scene classScene = new Scene(classSceneParent);
             Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(afterLoginScene);
+            window.setScene(classScene);
 
 
             ClassSceneController controller = loader.getController();
@@ -108,7 +113,27 @@ public class ClientMainSceneController {
                         }
                     });
             buttons.add(button);
+        }
+        return buttons;
+    }
+    public ArrayList<Button> getClassesButtonsForMyClassPage() {
+        ArrayList<Button> buttons =new ArrayList<Button>();
 
+        for(int i=0;i<20;i++){
+            Button button = new Button("Class: "+i);
+            button.setPrefSize(120,120);
+            //mainPageFlowPane.getChildren().add(button);
+            button.setOnAction(event);
+
+            //add action on class button to show over view
+            button.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent e) {
+                            myClassOverviewText.setText(button.getText());
+                        }
+                    });
+            buttons.add(button);
         }
         return buttons;
     }
