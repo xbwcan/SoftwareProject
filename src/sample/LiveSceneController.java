@@ -1,21 +1,31 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.PopupWindow;
 
 import java.io.IOException;
 
-public class ClassSceneController {
+public class LiveSceneController {
+    public DatePicker datePicker;
+    public ChoiceBox timePicker;
     public Tab introTag;
+    public Course course;//should be Live Session
     public TabPane tabPane;
-    Course course;
-    public void setCourse(Course course){
-        this.course = course;
+
+    @FXML
+    public void initialize() {
+        timePicker.getItems().add("8:00 am ~ 10:00 am");
+        timePicker.getItems().add("10:00 am ~ 12:00 am");
+        timePicker.getItems().add("13:00 pm ~ 15:00 pm");
+        timePicker.getItems().add("15:00 pm ~ 17:00 pm");
+        timePicker.setValue(timePicker.getItems().get(0));
     }
     public void buildScene() throws IOException {
 

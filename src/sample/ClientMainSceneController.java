@@ -96,6 +96,46 @@ public class ClientMainSceneController {
         }
     };
 
+    EventHandler<ActionEvent> liveButtonClieked = new EventHandler<ActionEvent>() {
+        /**
+         * this function change to the course page according to the class button clicked.
+         * @param actionEvent
+         */
+        @Override
+        public void handle(ActionEvent actionEvent) {
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("LiveScene.fxml"));
+            Parent classSceneParent = null;
+
+            try {
+                classSceneParent = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Scene classScene = new Scene(classSceneParent);
+            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            window.setScene(classScene);
+
+
+            LiveSceneController controller = loader.getController();
+            ArrayList <String> plan = new ArrayList<String>();
+            plan.add("Day1's plan.");
+            plan.add("Day2's plan.");
+            plan.add("Day3's:plan");
+            Course course = new Course("YOGA","PZ",2,plan);
+
+            controller.course = course;
+            try {
+                controller.buildScene();//build course scene dynamically according to the course information
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    };
+
     public ArrayList<Button> getClassesButtonsForMainPage() {
         ArrayList<Button> buttons =new ArrayList<Button>();
 
@@ -145,7 +185,7 @@ public class ClientMainSceneController {
             Button button = new Button("Class: "+i);
             button.setPrefSize(120,120);
             //mainPageFlowPane.getChildren().add(button);
-            button.setOnAction(event);
+            button.setOnAction(liveButtonClieked);
 
             button.addEventHandler(MouseEvent.MOUSE_ENTERED,
                     new EventHandler<MouseEvent>() {
