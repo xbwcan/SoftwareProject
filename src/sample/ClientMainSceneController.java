@@ -83,6 +83,7 @@ public class ClientMainSceneController {
             ArrayList <String> plan = new ArrayList<String>();
             plan.add("Day1's plan.");
             plan.add("Day2's plan.");
+            plan.add("Day3's:plan");
             Course course = new Course("YOGA","PZ",2,plan);
 
             controller.course = course;
