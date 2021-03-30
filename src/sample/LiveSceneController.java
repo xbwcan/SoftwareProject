@@ -72,4 +72,12 @@ public class LiveSceneController {
     public void goLiveButtonClicked(ActionEvent actionEvent) {
 
     }
+
+    /**
+     * this method is called when book button clicked, need check method in future
+     * go to payment window.
+     * @param actionEvent
+     */
+    public void bookbuttonClicked(ActionEvent actionEvent) {
+    }
 }
