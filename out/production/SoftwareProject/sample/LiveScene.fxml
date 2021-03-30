@@ -39,7 +39,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="421.0" layoutY="455.0" mnemonicParsing="false" prefHeight="102.0" prefWidth="378.0" text="Goto Live Session" textAlignment="RIGHT">
+      <Button layoutX="421.0" layoutY="455.0" mnemonicParsing="false" onAction="#goLiveButtonClicked" prefHeight="102.0" prefWidth="378.0" text="Goto Live Session" textAlignment="RIGHT">
          <font>
             <Font size="18.0" />
          </font>

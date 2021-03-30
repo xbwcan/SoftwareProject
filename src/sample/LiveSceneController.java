@@ -68,4 +68,8 @@ public class LiveSceneController {
         window.setScene(previousScene);
 
     }
+
+    public void goLiveButtonClicked(ActionEvent actionEvent) {
+
+    }
 }
