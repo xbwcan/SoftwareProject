@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,6 +13,11 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+
+import javafx.application.Application;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,6 +38,14 @@ public class ClientMainSceneController {
     public FlowPane myClassFlowPane;//this plan hold classes in my class
     public TextArea mainPageOverviewText;
     public TextArea myClassOverviewText;
+    public ChoiceBox mainPageFilterType;
+    public Button mainPageSearchButton;
+    public RadioButton mainPageClassButton;
+    public RadioButton mainPageLiveButton;
+    public Button myClassSearchButton;
+    public ChoiceBox myClassFilterType;
+    public RadioButton myClassClassButton;
+    public RadioButton myClassLiveButton;
 
     // public Label premiumLabel;
     @FXML
@@ -38,6 +53,18 @@ public class ClientMainSceneController {
         for(int i=8;i<=100;i++)
             myAccountAgeField.getItems().add(i);
         myAccountAgeField.setValue(20);
+        mainPageFilterType.getItems().add("Yoga");
+        mainPageFilterType.getItems().add("Swim");
+        myClassFilterType.getItems().add("Yoga");
+        myClassFilterType.getItems().add("Swim");
+
+        final ToggleGroup group1 = new ToggleGroup();
+        mainPageClassButton.setToggleGroup(group1);
+        mainPageLiveButton.setToggleGroup(group1);
+
+        final ToggleGroup group2 = new ToggleGroup();
+        myClassClassButton.setToggleGroup(group2);
+        myClassLiveButton.setToggleGroup(group2);
 
         updateClassesInMainPage();
         updateClassesInMyClass();
@@ -242,9 +269,30 @@ public class ClientMainSceneController {
     public void myAccountSaveButtonClicked(ActionEvent actionEvent) {
 
     }
+
+    /**
+     * this method get what lessons and types user choose, and show them. It's in MainPage.
+     * @param actionEvent
+     */
+    public void mainPageSearchClicked(ActionEvent actionEvent) {
+    }
+
+    /**
+     * this method get what lessons and types user choose, and show them. It's in MyClasses&Live.
+     * @param actionEvent
+     */
+    public void myClassSearchClicked(ActionEvent actionEvent) {
+    }
     /**
      *
      * 1351
      */
+
+
+
+
+
+
+
 
 }
