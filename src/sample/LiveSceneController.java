@@ -69,8 +69,18 @@ public class LiveSceneController {
 
     }
 
-    public void goLiveButtonClicked(ActionEvent actionEvent) {
+    public void goLiveButtonClicked(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
 
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("LiveShowScene.fxml"));
+        Parent LiveShowSceneParent = loader.load();
+        Scene LiveShowScene = new Scene(LiveShowSceneParent);
+
+        stage.setScene(LiveShowScene);
+
+        stage.show();
     }
 
     /**
@@ -78,6 +88,17 @@ public class LiveSceneController {
      * go to payment window.
      * @param actionEvent
      */
-    public void bookbuttonClicked(ActionEvent actionEvent) {
+    public void bookbuttonClicked(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Payment.fxml"));
+        Parent PaymentParent = loader.load();
+        Scene PaymentScene = new Scene(PaymentParent);
+
+        stage.setScene(PaymentScene);
+
+        stage.show();
     }
 }
