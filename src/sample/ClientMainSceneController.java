@@ -48,6 +48,16 @@ public class ClientMainSceneController {
     public RadioButton myClassLiveButton;
     final ToggleGroup group1 = new ToggleGroup();
     final ToggleGroup group2 = new ToggleGroup();
+    public Label Normal;
+    public Label FreeFor;
+    public Label PayFor;
+    public Label Discount;
+    public Label Extra;
+    public Label All;
+    public Label Premier;
+    public Label Off;
+    public Label discountRatio;
+    public Button buy;
 
     // public Label premiumLabel;
     @FXML
@@ -373,6 +383,20 @@ public class ClientMainSceneController {
      */
     public void myClassSearchClicked(ActionEvent actionEvent) {
         updateClassesInMyClass();
+    }
+
+    public void payment(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Payment.fxml"));
+        Parent PaymentParent = loader.load();
+        Scene PaymentScene = new Scene(PaymentParent);
+
+        stage.setScene(PaymentScene);
+
+        stage.show();
     }
     /**
      *

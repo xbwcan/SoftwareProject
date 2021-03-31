@@ -16,15 +16,16 @@ public class ClassSceneController {
     public Tab introTag;
     public TabPane tabPane;
     public Button goBack;
-    public TextField accountType;
     public Label freefor;
     public Label forsingle;
     public Button watchVideo;
-    public TextField accountPrice;
     public Button delete;
     public Button subscibe;
     public Course course;
     public Scene previousScene;
+    public Label accountType;
+    public Label accountPrice;
+
     public void setCourse(Course course){
         this.course = course;
     }
@@ -68,15 +69,17 @@ public class ClassSceneController {
     }
 
     public void watchVideo(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("WatchVideo.fxml"));
-        Parent watchVideoParent = loader.load();
-        Scene watchVideoScene = new Scene(watchVideoParent);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(watchVideoScene);
-        WatchVideo controller = loader.getController();
-        controller.previousScene = ((Node)actionEvent.getSource()).getScene();
-        window.show();
+        Parent WatchVideoParent = loader.load();
+        Scene WatchVideoScene = new Scene(WatchVideoParent);
+
+        stage.setScene(WatchVideoScene);
+
+        stage.show();
     }
 
     public void Payment(ActionEvent actionEvent) throws IOException {
