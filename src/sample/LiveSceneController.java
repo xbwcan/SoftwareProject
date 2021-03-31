@@ -1,33 +1,35 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.PopupWindow;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ClassSceneController {
+public class LiveSceneController {
+    public DatePicker datePicker;
+    public ChoiceBox timePicker;
     public Tab introTag;
+    public Course course;//should be Live Session
     public TabPane tabPane;
-    public Button goBack;
-    public Label freefor;
-    public Label forsingle;
-    public Button watchVideo;
-    public Button delete;
-    public Button subscibe;
-    public Course course;
     public Scene previousScene;
-    public Label accountType;
-    public Label accountPrice;
 
-    public void setCourse(Course course){
-        this.course = course;
+    @FXML
+    public void initialize() {
+        timePicker.getItems().add("8:00 am ~ 10:00 am");
+        timePicker.getItems().add("10:00 am ~ 12:00 am");
+        timePicker.getItems().add("13:00 pm ~ 15:00 pm");
+        timePicker.getItems().add("15:00 pm ~ 17:00 pm");
+        timePicker.setValue(timePicker.getItems().get(0));
     }
     public void buildScene() throws IOException {
 
@@ -54,45 +56,28 @@ public class ClassSceneController {
             tabPane.getTabs().add(tab);
 
         }
-        //accountType
-        //accountPrice
-
     }
 
-    public void goBack(ActionEvent actionEvent) throws IOException {
+    public void backButtonClicked(ActionEvent actionEvent) throws IOException {
+
 
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        ClientMainSceneController controller = (ClientMainSceneController) previousScene.getUserData();//get controller of previous scene
+        ClientMainSceneController controller = (ClientMainSceneController) previousScene.getUserData();
         controller.updateClassesInMyClass();
         controller.updateClassesInMainPage();
         window.setScene(previousScene);
+
     }
 
-    public void watchVideo(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
+    public void goLiveButtonClicked(ActionEvent actionEvent) {
 
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("WatchVideo.fxml"));
-        Parent WatchVideoParent = loader.load();
-        Scene WatchVideoScene = new Scene(WatchVideoParent);
-
-        stage.setScene(WatchVideoScene);
-
-        stage.show();
     }
 
-    public void Payment(ActionEvent actionEvent) throws IOException {
-        Stage stage = new Stage();
-
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("Payment.fxml"));
-        Parent PaymentParent = loader.load();
-        Scene PaymentScene = new Scene(PaymentParent);
-
-        stage.setScene(PaymentScene);
-
-        stage.show();
+    /**
+     * this method is called when book button clicked, need check method in future
+     * go to payment window.
+     * @param actionEvent
+     */
+    public void bookbuttonClicked(ActionEvent actionEvent) {
     }
 }
