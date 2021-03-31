@@ -20,13 +20,11 @@ public class WatchVideo {
     public TextField videoNumber;
     public Button goback;
     public Polygon triangle;
+    public Scene previousScene;
 
     public void goback(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ClassScene.fxml"));
-        Parent ClassSceneParent = loader.load();
-        Scene scene = new Scene(ClassSceneParent);
+
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene);
+        window.setScene(previousScene);
     }
 }
