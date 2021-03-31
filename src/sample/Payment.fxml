@@ -9,6 +9,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Payment">
    <children>
+      <Label fx:id="price" layoutX="192.0" layoutY="186.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="item" layoutX="192.0" layoutY="106.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <Button fx:id="confirm" layoutX="232.0" layoutY="297.0" mnemonicParsing="false" onAction="#confirm" text="Confirm">
          <font>
             <Font size="24.0" />
@@ -28,15 +38,5 @@
          <font>
             <Font size="36.0" />
          </font></Label>
-      <TextField fx:id="item" layoutX="213.0" layoutY="88.0" >
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="price" layoutX="214.0" layoutY="171.0" >
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
    </children>
 </AnchorPane>

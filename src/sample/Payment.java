@@ -12,8 +12,9 @@ public class Payment {
     public Label priceLabel;
     public Label itemLabel;
     public Label payment;
-    public TextField item;
-    public TextField price;
+    public Label item;
+    public Label price;
+
 
     public void confirm(ActionEvent actionEvent) {
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
