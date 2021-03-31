@@ -17,14 +17,8 @@ import java.io.IOException;
 public class WatchVideo {
     public Circle circle;
     public Label video;
-    public TextField videoNumber;
-    public Button goback;
     public Polygon triangle;
     public Scene previousScene;
+    public Label videoNumber;
 
-    public void goback(ActionEvent actionEvent) throws IOException {
-
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(previousScene);
-    }
 }
