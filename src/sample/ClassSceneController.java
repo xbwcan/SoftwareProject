@@ -23,7 +23,8 @@ public class ClassSceneController {
     public TextField accountPrice;
     public Button delete;
     public Button subscibe;
-    Course course;
+    public Course course;
+    public Scene previousScene;
     public void setCourse(Course course){
         this.course = course;
     }
@@ -58,21 +59,23 @@ public class ClassSceneController {
     }
 
     public void goBack(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ClientMainScene.fxml"));
-        Parent ClientMainSceneParent = loader.load();
-        Scene scene = new Scene(ClientMainSceneParent);
+
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene);
+        ClientMainSceneController controller = (ClientMainSceneController) previousScene.getUserData();//get controller of previous scene
+        controller.updateClassesInMyClass();
+        controller.updateClassesInMainPage();
+        window.setScene(previousScene);
     }
 
     public void watchVideo(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("WatchVideo.fxml"));
-        Parent WatchVideoParent = loader.load();
-        Scene WatchVideoScene = new Scene(WatchVideoParent);
+        Parent watchVideoParent = loader.load();
+        Scene watchVideoScene = new Scene(watchVideoParent);
         Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(WatchVideoScene);
+        window.setScene(watchVideoScene);
+        WatchVideo controller = loader.getController();
+        controller.previousScene = ((Node)actionEvent.getSource()).getScene();
         window.show();
     }
 
