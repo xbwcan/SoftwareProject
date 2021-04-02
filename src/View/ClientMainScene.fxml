@@ -20,7 +20,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ClientMainSceneController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ClientMainSceneController">
    <children>
       <TabPane layoutX="14.0" layoutY="14.0" prefHeight="562.0" prefWidth="775.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>

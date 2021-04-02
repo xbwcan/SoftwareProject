@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LiveSceneController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.LiveSceneController">
    <children>
       <TabPane fx:id="tabPane" layoutX="3.0" layoutY="189.0" prefHeight="318.0" prefWidth="410.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
         <tabs>

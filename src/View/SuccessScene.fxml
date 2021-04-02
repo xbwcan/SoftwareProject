@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="160.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SuccessScene">
+<VBox alignment="TOP_CENTER" prefHeight="160.0" prefWidth="409.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SuccessScene">
    <children>
       <Label prefHeight="104.0" prefWidth="180.0" text="Success" textAlignment="CENTER" textFill="#c80000">
          <font>
