@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="182.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChangeEmailScene">
+<AnchorPane prefHeight="182.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ChangeEmailScene">
    <children>
       <Button fx:id="sendVarifyButton" layoutX="283.0" layoutY="41.0" mnemonicParsing="false" onAction="#sendVarifyClicked" text="send varification code">
          <font>
