@@ -17,7 +17,7 @@ public class Course {
         this.plan = plan;
     }
     String getIntro(){
-        return name+"\n"+trainer+"\n"+day+"days\n";
+        return name+"\n"+trainer+"\n"+plan.size()+"days\n";
     }
 
     /**

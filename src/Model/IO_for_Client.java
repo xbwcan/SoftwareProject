@@ -128,7 +128,7 @@ public class IO_for_Client {
 
         return client;
     }
-    public int Update(String tag, String text)
+    public int Update(String name,String tag, String text)
     {
         return 0;
     }

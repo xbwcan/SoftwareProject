@@ -1,6 +1,5 @@
 package Model;
 
-import Model.Plan;
 
 import java.util.ArrayList;
 
