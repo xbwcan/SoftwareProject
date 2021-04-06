@@ -11,7 +11,11 @@ public class Client{
         ArrayList<Live> My_Lives = new ArrayList<>();
         ArrayList<Generic_Plan> Generic_Plans = new ArrayList<>();
         ArrayList<Class>My_Classes = new ArrayList<>();
-        private Client(String Phone_number, String Email) {
+        public Client()
+        {
+
+        }
+        public Client(String Phone_number, String Email) {
                 this.Phone_number = Phone_number;
                 this.Email = Email;
         }
