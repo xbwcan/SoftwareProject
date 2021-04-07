@@ -3,8 +3,8 @@ package Model;
 import java.util.ArrayList;
 
 public class Client{
-        String name, Phone_number, Email, State, Password;
-        int Weight, Height, BMI, Fatty_Lipase, Age, Rank, Sex;
+        String name, Phone_number, Email, State, Password, Sex;
+        int Weight, Height, BMI, Fatty_Lipase, Age, Rank;
         long Rank_Start_Time, Rank_End_Time;
         double discount;
         Generic_Plan generic_plan;
@@ -128,11 +128,11 @@ public class Client{
         public void setBMI(int BMI) {
                 this.BMI =Weight/(Height*Height);
         }
-        public void setSex(int Sex)
+        public void setSex(String Sex)
         {
                 this.Sex = Sex;
         }
-        public int getSex()
+        public String getSex()
         {
                 return Sex;
         }
@@ -167,5 +167,17 @@ public class Client{
 
         public void setGeneric_plan(Generic_Plan generic_plan) {
                 this.generic_plan = generic_plan;
+        }
+        public  void addClasses(Class course)
+        {
+                My_Classes.add(course);
+        }
+        public  void addLives(Live live)
+        {
+                My_Lives.add(live);
+        }
+        public void addGeneric_Plan(Generic_Plan p)
+        {
+                Generic_Plans.add(p);
         }
 }

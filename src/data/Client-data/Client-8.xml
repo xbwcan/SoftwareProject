@@ -28,8 +28,8 @@
     </Rank_End_Time>
     <State>active</State>
     <Generic_Plan></Generic_Plan>
-    <My_Class>
-        Class-8
-    </My_Class>
+    <My_Classes>
+        <class id="01">Class-8</class>
+    </My_Classes>
     <My_Live></My_Live>
 </Client>
