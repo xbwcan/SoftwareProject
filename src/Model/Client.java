@@ -7,6 +7,7 @@ public class Client{
         int Weight, Height, BMI, Fatty_Lipase, Age, Rank;
         long Rank_Start_Time, Rank_End_Time;
         double discount;
+        int free_time;
         Generic_Plan generic_plan;
         ArrayList<Live> My_Lives = new ArrayList<>();
         ArrayList<Generic_Plan> Generic_Plans = new ArrayList<>();
@@ -179,5 +180,13 @@ public class Client{
         public void addGeneric_Plan(Generic_Plan p)
         {
                 Generic_Plans.add(p);
+        }
+
+        public int getFree_time() {
+                return free_time;
+        }
+
+        public void setFree_time(int free_time) {
+                this.free_time = free_time;
         }
 }

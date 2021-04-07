@@ -5,9 +5,11 @@ import java.util.ArrayList;
 
 public class Class {
 
-    String Trainer, State, Info, Type;
+    String Trainer, State, Info, Type, Video_Path;
     int Rate_of_Process;
     ArrayList<Plan> Day_Plans = new ArrayList<>();
+    int price;
+    int rank;
     public Class(String trainer, String state, String info, String type,
                  int rate_of_Process,
                  ArrayList<Plan> day_Plans) {
@@ -17,6 +19,10 @@ public class Class {
         Type = type;
         Rate_of_Process = rate_of_Process;
         Day_Plans = day_Plans;
+    }
+
+    public Class() {
+
     }
 
     public String getTrainer() {
@@ -67,4 +73,31 @@ public class Class {
         this.Day_Plans = day_Plans;
     }
 
+    public String getVideo_Path() {
+        return Video_Path;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setVideo_Path(String video_Path) {
+        Video_Path = video_Path;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+    public void addDay_Plans(Plan plan)
+    {
+        Day_Plans.add(plan);
+    }
 }

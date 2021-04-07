@@ -7,16 +7,19 @@ public class Generic_Plan {
 
     ArrayList<String> Train_Plan_Sports = new ArrayList<>();
     ArrayList<Integer> Train_Plan_times = new ArrayList<>();
-    ArrayList<Long> Train_Plan_time = new ArrayList<>();
 
+    String food_plan;
     public Generic_Plan(ArrayList<String> train_Plan_Sports, ArrayList<Integer> train_Plan_times,
                         ArrayList<Long> train_Plan_time)
     {
         this.Train_Plan_Sports = train_Plan_Sports;
         this.Train_Plan_times = train_Plan_times;
-        this.Train_Plan_time = train_Plan_time;
-    }
 
+    }
+    public Generic_Plan()
+    {
+
+    }
     public void setTrain_Plan_Sports(ArrayList<String> train_Plan_Sports) {
         this.Train_Plan_Sports = train_Plan_Sports;
     }
@@ -33,12 +36,12 @@ public class Generic_Plan {
         return Train_Plan_Sports;
     }
 
-    public ArrayList<Long> getTrain_Plan_time() {
-        return Train_Plan_time;
+    public String getFood_plan() {
+        return food_plan;
     }
 
-    public void setTrain_Plan_time(ArrayList<Long> train_Plan_time) {
-        this.Train_Plan_time = train_Plan_time;
+    public void setFood_plan(String food_plan) {
+        this.food_plan = food_plan;
     }
 }
 

@@ -6,9 +6,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 import java.io.File;
 import java.io.IOException;
 
@@ -19,9 +17,9 @@ public class IO_for_Client {
     public IO_for_Client() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        String url = ".\\Data\\Client\\Client.xml";
+        String url = "src\\Data\\Client.xml";
         File f = new File(url);
-         doc = builder.parse(f);
+        doc = builder.parse(f);
         root = doc.getDocumentElement();
     }
     public int Create(Client client)
@@ -33,110 +31,109 @@ public class IO_for_Client {
     {
         return 0;
     }
-    public Client Read(String name) throws XPathExpressionException {
+    public  Client Read(String id) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
         Client client = new Client();
         NodeList children = root.getChildNodes();
         for(int i=0;i<children.getLength();i++)
         {
             Node child = children.item(i);
-            XPathFactory xpathfactory = XPathFactory.newInstance();
-            XPath path = xpathfactory.newXPath();
-            String flg = path.evaluate("/Client["+i+"]/Phone_Number/text()",doc);
-            if(!flg.equals(name))
+
+
+            if(child instanceof Element)
             {
-                break;
-            }
-            else
-            {
+                var childElement = (Element) child;
+                String ID = childElement.getAttribute("id");
+                if (!ID.equals(id))
+                    continue;
                 NodeList grandchildren =child.getChildNodes();
                 for(int j=0;j<grandchildren.getLength();j++)
                 {
                     Node grandchild = grandchildren.item(j);
-                    if(child instanceof Element)
+                    if(grandchild instanceof Element)
                     {
-                        var childElement = (Element) grandchild;
+                        var grandchildElement = (Element) grandchild;
 
 
-                        switch (childElement.getTagName().trim())
+                        switch (grandchildElement.getTagName().trim())
                         {
-                            case "Name":    {
+                            case "Name"->    {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setName(text);
                             }
-                            case "Phone_Number":
+                            case "Phone_Number"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setPhone_number(text);
                             }
-                            case "E_mail":
+                            case "E_mail"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setEmail(text);
                             }
-                            case "Height":
+                            case "Height"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setHeight(Integer.parseInt(text));
                             }
-                            case "Weight":
+                            case "Weight"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setWeight(Integer.parseInt(text));
                             }
-                            case "BMI":
+                            case "BMI"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setBMI(Integer.parseInt(text));
                             }
-                            case "Fatty_Lipase":
+                            case "Fatty_Lipase"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setFatty_Lipase(Integer.parseInt(text));
                             }
-                            case "sex":
+                            case "sex"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setSex(text);
                             }
-                            case "Age":
+                            case "Age"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setAge(Integer.parseInt(text));
                             }
-                            case "Rank":
+                            case "Rank"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setRank(Integer.parseInt(text));
                             }
-                            case "State":
+                            case "State"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setState(text);
                             }
-                            case "Rank_Start_Time":
+                            case "Rank_Start_Time"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setRank_Start_Time(Long.parseLong(text));
                             }
-                            case "Rank_End_Time":
+                            case "Rank_End_Time"->
                             {
                                 var textNode = (Text)grandchild.getFirstChild();
                                 String text =textNode.getData().trim();
                                 client.setRank_End_Time(Long.parseLong(text));
                             }
-                            case "My_Classes" :
+                            case "My_Classes" ->
                             {
                                 NodeList great_grandchildren = grandchild.getChildNodes();
                                 for(int k=0;j<great_grandchildren.getLength();k++)
@@ -147,11 +144,11 @@ public class IO_for_Client {
                                         var textNode = (Text)grandchild.getFirstChild();
                                         String text = textNode.getData().trim();
                                         IO_for_Class io = new IO_for_Class();
-                                        client.addClasses(io.read(text));
+                                        client.addClasses(io.Read(text));
                                     }
                                 }
                             }
-                            case "My_Live" :
+                            case "My_Live"  ->
                             {
                                 NodeList great_grandchildren = grandchild.getChildNodes();
                                 for(int k=0;j<great_grandchildren.getLength();j++)
@@ -162,11 +159,11 @@ public class IO_for_Client {
                                         var textNode = (Text)grandchild.getFirstChild();
                                         String text = textNode.getData().trim();
                                         IO_for_Live io = new IO_for_Live();
-                                        client.addClasses(io.read(text));
+                                        client.addLives(io.Read(text));
                                     }
                                 }
                             }
-                            case "Generic_Plan" :
+                            case "Generic_Plan" ->
                             {
                                 NodeList great_grandchildren = grandchild.getChildNodes();
                                 for(int k=0;k<great_grandchildren.getLength();k++)
@@ -177,7 +174,7 @@ public class IO_for_Client {
                                         var textNode = (Text)grandchild.getFirstChild();
                                         String text = textNode.getData().trim();
                                         IO_for_Generic_Plan io = new IO_for_Generic_Plan();
-                                        client.addClasses(io.read(text));
+                                        client.addGeneric_Plan(io.Read(text));
                                     }
                                 }
                             }
@@ -192,8 +189,160 @@ public class IO_for_Client {
 
         return client;
     }
-    public int Update(String name,String tag, String text)
-    {
+    public int Update(String id,Client client) throws IOException, ParserConfigurationException, SAXException {
+        NodeList children = root.getChildNodes();
+        for(int i=0;i<children.getLength();i++)
+        {
+            Node child = children.item(i);
+
+
+            if(child instanceof Element)
+            {
+                var childElement = (Element) child;
+                String ID = childElement.getAttribute("id");
+                if (!ID.equals(id))
+                    continue;
+                NodeList grandchildren =child.getChildNodes();
+                for(int j=0;j<grandchildren.getLength();j++)
+                {
+                    Node grandchild = grandchildren.item(j);
+                    if(grandchild instanceof Element)
+                    {
+                        var grandchildElement = (Element) grandchild;
+
+
+                        switch (grandchildElement.getTagName().trim())
+                        {
+                            case "Name"->    {
+                                var textNode = (Text)grandchild.getFirstChild();
+                                String text =textNode.getData().trim();
+                                client.setName(text);
+                            }
+                            case "Phone_Number"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setPhone_number(text);
+                                    }
+                            case "E_mail"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setEmail(text);
+                                    }
+                            case "Height"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setHeight(Integer.parseInt(text));
+                                    }
+                            case "Weight"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setWeight(Integer.parseInt(text));
+                                    }
+                            case "BMI"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setBMI(Integer.parseInt(text));
+                                    }
+                            case "Fatty_Lipase"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setFatty_Lipase(Integer.parseInt(text));
+                                    }
+                            case "sex"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setSex(text);
+                                    }
+                            case "Age"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setAge(Integer.parseInt(text));
+                                    }
+                            case "Rank"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setRank(Integer.parseInt(text));
+                                    }
+                            case "State"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setState(text);
+                                    }
+                            case "Rank_Start_Time"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setRank_Start_Time(Long.parseLong(text));
+                                    }
+                            case "Rank_End_Time"->
+                                    {
+                                        var textNode = (Text)grandchild.getFirstChild();
+                                        String text =textNode.getData().trim();
+                                        client.setRank_End_Time(Long.parseLong(text));
+                                    }
+                            case "My_Classes" ->
+                                    {
+                                        NodeList great_grandchildren = grandchild.getChildNodes();
+                                        for(int k=0;j<great_grandchildren.getLength();k++)
+                                        {
+                                            Node great_grandchild = great_grandchildren.item(j);
+                                            if( great_grandchild instanceof Element)
+                                            {
+                                                var textNode = (Text)grandchild.getFirstChild();
+                                                String text = textNode.getData().trim();
+                                                IO_for_Class io = new IO_for_Class();
+                                                client.addClasses(io.Read(text));
+                                            }
+                                        }
+                                    }
+                            case "My_Live"  ->
+                                    {
+                                        NodeList great_grandchildren = grandchild.getChildNodes();
+                                        for(int k=0;j<great_grandchildren.getLength();j++)
+                                        {
+                                            Node great_grandchild = great_grandchildren.item(j);
+                                            if( great_grandchild instanceof Element)
+                                            {
+                                                var textNode = (Text)grandchild.getFirstChild();
+                                                String text = textNode.getData().trim();
+                                                IO_for_Live io = new IO_for_Live();
+                                                client.addLives(io.Read(text));
+                                            }
+                                        }
+                                    }
+                            case "Generic_Plan" ->
+                                    {
+                                        NodeList great_grandchildren = grandchild.getChildNodes();
+                                        for(int k=0;k<great_grandchildren.getLength();k++)
+                                        {
+                                            Node great_grandchild = great_grandchildren.item(j);
+                                            if( great_grandchild instanceof Element)
+                                            {
+                                                var textNode = (Text)grandchild.getFirstChild();
+                                                String text = textNode.getData().trim();
+                                                IO_for_Generic_Plan io = new IO_for_Generic_Plan();
+                                                client.addGeneric_Plan(io.Read(text));
+                                            }
+                                        }
+                                    }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
         return 0;
     }
 }

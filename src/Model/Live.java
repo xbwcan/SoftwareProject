@@ -1,14 +1,13 @@
 package Model;
 
-import Model.Plan;
-
 import java.util.ArrayList;
 
 public class Live {
 
-    String Trainer, State, Info, Type;
+    String Trainer, State, Info, Type, path;
     int Rate_of_Process, Start_time, End_time;
-    ArrayList<String> Video_Path = new ArrayList<String>();
+    int price;
+    int rank;
     ArrayList<Plan> Day_Plans = new ArrayList<Plan>();
 
     public Live(String trainer, String state, String info, String type,
@@ -21,8 +20,12 @@ public class Live {
         Rate_of_Process = rate_of_Process;
         Start_time = start_time;
         End_time = end_time;
-        Video_Path = video_Path;
+
         Day_Plans = day_Plans;
+    }
+
+    public Live() {
+
     }
 
     public String getTrainer() {
@@ -53,9 +56,6 @@ public class Live {
         return End_time;
     }
 
-    public ArrayList<String> getVideo_Path() {
-        return Video_Path;
-    }
 
     public ArrayList<Plan> getDay_Plans() {
         return Day_Plans;
@@ -89,11 +89,37 @@ public class Live {
         End_time = end_time;
     }
 
-    public void setVideo_Path(ArrayList<String> video_Path) {
-        Video_Path = video_Path;
-    }
+
 
     public void setDay_Plans(ArrayList<Plan> day_Plans) {
         Day_Plans = day_Plans;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public void addDay_Plans(Plan p) {
+        Day_Plans.add(p);
     }
 }
