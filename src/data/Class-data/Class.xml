@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Class>
+    <Class id="01">
+    <Trainer>Caesar Anthonio Zeppeli</Trainer>
+    <State>active</State>
+    <Info>This is a advanced lesson</Info>
+    <Type>back exercise</Type>
+    <Rate_of_Process>40</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Pull-up 20 times/group
+            Cable Seated High Row 20 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="02">
+        <Trainer>Kishibe Rohan</Trainer>
+    <State>active</State>
+    <Info>This is a lesson for beginner</Info>
+    <Type>arm exercise</Type>
+    <Rate_of_Process>20</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Dumbbell Curl 10 times/group
+            Dumbbell Fly 10 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="03">
+        <Trainer>Jonathan Joestar</Trainer>
+    <State>active</State>
+    <Info>This is a lesson for beginner</Info>
+    <Type>leg exercise</Type>
+    <Rate_of_Process>30</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            2000/1/1
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            squats 10 times/group
+            Deadlift 10 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="04">
+        <Trainer>Jolyne Cujoh</Trainer>
+    <State>banned</State>
+    <Info>This is a advanced lesson</Info>
+    <Type>arm exercise</Type>
+    <Rate_of_Process>20</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Dumbbell Curl 20 times/group
+            Dumbbell Fly 20 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="05">
+        <Trainer>William A Zeppeli</Trainer>
+    <State>banned</State>
+    <Info>This is a advanced lesson</Info>
+    <Type>abdominal exercise</Type>
+    <Rate_of_Process>45</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Clam 20 times/group
+            Crunch Twist 20 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="06">
+        <Trainer>Caesar Anthonio Zeppeli</Trainer>
+    <State>active</State>
+    <Info>This is a lesson for beginner</Info>
+    <Type>pectoral exercise</Type>
+    <Rate_of_Process>20</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="07">
+        <Trainer>Jolyne Cujoh</Trainer>
+    <State>banned</State>
+    <Info>This is a advanced lesson</Info>
+    <Type>pectoral exercise</Type>
+    <Rate_of_Process>10</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Barbell Bench Press 20 times/group
+            Push Up 20 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="08">
+        <Trainer>Higashikata Josuke</Trainer>
+    <State>active</State>
+    <Info>This is a lesson for beginner</Info>
+    <Type>back exercise</Type>
+    <Rate_of_Process>70</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Pull-up 10 times/group
+            Cable Seated High Row 10 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="09">
+        <Trainer>William A Zeppeli</Trainer>
+    <State>active</State>
+    <Info>This is a advanced lesson</Info>
+    <Type>leg exercise</Type>
+    <Rate_of_Process>50</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            squats 20 times/group
+            Deadlift 20 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+    <Class id="10">
+        <Trainer>Higashikata Josuke</Trainer>
+    <State>active</State>
+    <Info>This is a lesson for beginner</Info>
+    <Type>abdominal exercise</Type>
+    <Rate_of_Process>10</Rate_of_Process>
+    <Video_Path>"Main\\src\\data\\Video\\Video_1.mp4"</Video_Path>
+    <Day_Plan>
+        <Day_Plan_1>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>01</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_1>
+        <Day_Plan_2>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>02</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_2>
+        <Day_Plan_3>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_3>
+        <Day_Plan_4>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>04</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_4>
+        <Day_Plan_5>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>05</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_5>
+        <Day_Plan_6>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>06</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_6>
+        <Day_Plan_7>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>07</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_7>
+        <Day_Plan_8>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>08</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_8>
+        <Day_Plan_9>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>09</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_9>
+        <Day_Plan_10>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>10</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_10>
+        <Day_Plan_11>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>11</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_11>
+        <Day_Plan_12>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>12</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_12>
+        <Day_Plan_13>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>13</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_13>
+        <Day_Plan_14>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>14</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_14>
+        <Day_Plan_15>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>15</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_15>
+        <Day_Plan_16>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>16</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_16>
+        <Day_Plan_17>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>17</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_17>
+        <Day_Plan_18>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>18</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_18>
+        <Day_Plan_19>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>19</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_19>
+        <Day_Plan_20>
+            <Year>2000</Year>
+            <Month>01</Month>
+            <Day>20</Day>
+            Clam 10 times/group
+            Crunch Twist 10 times/group
+        </Day_Plan_20>
+    </Day_Plan>
+    </Class>
+</Class>
