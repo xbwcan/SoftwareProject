@@ -85,7 +85,7 @@ public class LiveSceneController {
 
     /**
      * this method is called when book button clicked, need check method in future
-     * go to payment window.
+     * go to success window.
      * @param actionEvent
      */
     public void bookbuttonClicked(ActionEvent actionEvent) throws IOException {
@@ -93,12 +93,31 @@ public class LiveSceneController {
 
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("Payment.fxml"));
+        loader.setLocation(getClass().getResource("SuccessScene.fxml"));
         Parent PaymentParent = loader.load();
         Scene PaymentScene = new Scene(PaymentParent);
 
         stage.setScene(PaymentScene);
 
+        stage.show();
+    }
+    /**
+     * this method is called when subscribe button clicked, need check method in future
+     * go to payment window.
+     * @param actionEvent
+     */
+    public void subscribeButtonClicked(ActionEvent actionEvent) throws IOException {
+        changeToPayment("Live Session 01","10$");
+    }
+    public void changeToPayment(String item,String price) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("Payment.fxml"));
+        Parent PaymentParent = loader.load();
+        Scene PaymentScene = new Scene(PaymentParent);
+        stage.setScene(PaymentScene);
+        Payment controller = loader.getController();
+        controller.buildScene(item,price);
         stage.show();
     }
 }

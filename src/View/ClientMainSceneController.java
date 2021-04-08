@@ -58,6 +58,9 @@ public class ClientMainSceneController {
     public Label Off;
     public Label discountRatio;
     public Button buy;
+    public ComboBox monthChoiceBox;
+    public Label premierDiscountPriceLable;
+    public Label premierOriginalPriceLabel;
 
     // public Label premiumLabel;
     @FXML
@@ -92,6 +95,10 @@ public class ClientMainSceneController {
         updateClassesInMyClass();
 
         updateNotice();
+
+        discountRatio.setText("10%");
+        for(int i=1;i<=12;i++)
+            monthChoiceBox.getItems().add(i);
     }
 
     public void updateClassesInMainPage(){
@@ -154,7 +161,7 @@ public class ClientMainSceneController {
 
     EventHandler<ActionEvent> liveButtonClieked = new EventHandler<ActionEvent>() {
         /**
-         * this function change to the course page according to the class button clicked.
+         * this function change to the live page according to the class button clicked.
          * @param actionEvent
          */
         @Override
@@ -385,23 +392,31 @@ public class ClientMainSceneController {
         updateClassesInMyClass();
     }
 
-    public void payment(ActionEvent actionEvent) throws IOException {
+    public void premierBuyClicked(ActionEvent actionEvent) throws IOException {
+        Integer month = (Integer) (monthChoiceBox.getValue());
+        changeToPayment("Premier for "+month+" month",premierDiscountPriceLable.getText());
+
+    }
+    public void premierMonthSelected() throws IOException {
+        Integer month = (Integer) (monthChoiceBox.getValue());
+        //System.out.println(month);
+        double originPrice = month * 50;
+        double discountPrice = month * 50 * (1-0.1);
+        premierOriginalPriceLabel.setText(originPrice+" $ ");
+        premierDiscountPriceLable.setText(discountPrice+" $ ");
+    }
+
+    public void changeToPayment(String item,String price) throws IOException {
         Stage stage = new Stage();
-
-
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Payment.fxml"));
         Parent PaymentParent = loader.load();
         Scene PaymentScene = new Scene(PaymentParent);
-
         stage.setScene(PaymentScene);
-
+        Payment controller = loader.getController();
+        controller.buildScene(item,price);
         stage.show();
     }
-    /**
-     *
-     * 1351
-     */
 
 
 

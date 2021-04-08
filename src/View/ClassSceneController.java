@@ -83,16 +83,18 @@ public class ClassSceneController {
     }
 
     public void Payment(ActionEvent actionEvent) throws IOException {
+        changeToPayment("course 01","5$");
+    }
+
+    public void changeToPayment(String item,String price) throws IOException {
         Stage stage = new Stage();
-
-
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Payment.fxml"));
         Parent PaymentParent = loader.load();
         Scene PaymentScene = new Scene(PaymentParent);
-
         stage.setScene(PaymentScene);
-
+        Payment controller = loader.getController();
+        controller.buildScene(item,price);
         stage.show();
     }
 }

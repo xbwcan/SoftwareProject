@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
@@ -18,9 +14,10 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ClientMainSceneController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ClientMainSceneController">
    <children>
       <TabPane layoutX="14.0" layoutY="14.0" prefHeight="562.0" prefWidth="775.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -259,21 +256,37 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Off" layoutX="555.0" layoutY="259.0" text="off">
+                        <Label fx:id="Off" layoutX="542.0" layoutY="251.0" text="off">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="discountRatio" layoutX="493.0" layoutY="262.0">
+                        <Label fx:id="discountRatio" layoutX="479.0" layoutY="255.0" prefHeight="24.0" prefWidth="50.0" textAlignment="RIGHT" textFill="#099e01">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button fx:id="buy" layoutX="558.0" layoutY="333.0" mnemonicParsing="false" onAction="#payment" text="Buy">
+                        <Button fx:id="buy" layoutX="558.0" layoutY="333.0" mnemonicParsing="false" onAction="#premierBuyClicked" text="Buy">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
+                        <Label layoutX="543.0" layoutY="288.0" text="Month">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="monthChoiceBox" layoutX="479.0" layoutY="293.0" onAction="#premierMonthSelected" prefHeight="23.0" prefWidth="59.0" />
+                        <Label fx:id="premierOriginalPriceLabel" layoutX="599.0" layoutY="227.0" prefHeight="32.0" prefWidth="100.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="premierDiscountPriceLable" layoutX="599.0" layoutY="260.0" prefHeight="32.0" prefWidth="106.0" textFill="#006b20">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
               </content>
             </Tab>

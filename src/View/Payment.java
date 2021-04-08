@@ -1,6 +1,7 @@
 package View;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,8 +13,11 @@ public class Payment {
     public Label priceLabel;
     public Label itemLabel;
     public Label payment;
-    public Label item;
-    public Label price;
+
+    public void buildScene(String item,String price){
+        itemLabel.setText(item);
+        priceLabel.setText(price);
+    }
 
 
     public void confirm(ActionEvent actionEvent) {
