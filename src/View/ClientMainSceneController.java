@@ -62,6 +62,7 @@ public class ClientMainSceneController {
     public Label premierDiscountPriceLable;
     public Label premierOriginalPriceLabel;
 
+    public Model.Client client;
     // public Label premiumLabel;
     @FXML
     public void initialize(){
@@ -99,6 +100,14 @@ public class ClientMainSceneController {
         discountRatio.setText("10%");
         for(int i=1;i<=12;i++)
             monthChoiceBox.getItems().add(i);
+    }
+
+    public void buildScene(){
+        myAccountAgeField.setValue(client.getAge());
+        myAccountWeightField.setText(""+client.getWeight());
+        myAccountHeightField.setText(""+client.getHeight());
+        myAccountBMIField.setText(""+client.getBMI());
+        myAccountFattyField.setText(""+client.getFatty_Lipase());
     }
 
     public void updateClassesInMainPage(){
