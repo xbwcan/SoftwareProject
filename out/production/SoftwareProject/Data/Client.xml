@@ -12,10 +12,20 @@
         <Age>19</Age>
         <Rank>1</Rank>
         <Rank_Start_Time>
-            20001001010920
+            <Year>2000</Year>
+            <Month>10</Month>
+            <Day>01</Day>
+            <Hour>01</Hour>
+            <Minute>09</Minute>
+            <Second>20</Second>
         </Rank_Start_Time>
         <Rank_End_Time>
-            20001101010930
+            <Year>2001</Year>
+            <Month>10</Month>
+            <Day>01</Day>
+            <Hour>01</Hour>
+            <Minute>09</Minute>
+            <Second>20</Second>
         </Rank_End_Time>
         <State>banned</State>
         <Generic_Plan id="01">01</Generic_Plan>

@@ -8,6 +8,7 @@ public class Client{
         long Rank_Start_Time, Rank_End_Time;
         double discount;
         int free_time;
+        String id;
         Generic_Plan generic_plan;
         ArrayList<Live> My_Lives = new ArrayList<>();
         ArrayList<Generic_Plan> Generic_Plans = new ArrayList<>();
@@ -158,6 +159,11 @@ public class Client{
                 return My_Classes;
         }
 
+        public Class getAClass(int n)
+        {
+                return My_Classes.get(n);
+        }
+
         public void setMy_Classes(ArrayList<Class> my_Classes) {
                 this.My_Classes = my_Classes;
         }
@@ -188,5 +194,17 @@ public class Client{
 
         public void setFree_time(int free_time) {
                 this.free_time = free_time;
+        }
+
+        public String getId() {
+                return id;
+        }
+
+        public void setId(String id) {
+                this.id = id;
+        }
+
+        public Live getALive(int k) {
+                return My_Lives.get(k);
         }
 }

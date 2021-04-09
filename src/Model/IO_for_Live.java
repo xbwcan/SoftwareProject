@@ -43,6 +43,7 @@ public class IO_for_Live {
                 String ID = childElement.getAttribute("id");
                 if (!ID.equals(id))
                     continue;
+                live.setId(id);
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);

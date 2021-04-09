@@ -96,6 +96,8 @@ public class IO_for_Class {
                 String ID = childElement.getAttribute("id");
                 if (!ID.equals(id))
                     continue;
+                course.setId(ID);
+
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -232,5 +234,6 @@ public class IO_for_Class {
     }
 
 
-
+    public void Update() {
+    }
 }

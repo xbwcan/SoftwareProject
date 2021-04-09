@@ -45,6 +45,7 @@ public class IO_for_Client {
                 String ID = childElement.getAttribute("id");
                 if (!ID.equals(id))
                     continue;
+                client.setId(id);
                 NodeList grandchildren =child.getChildNodes();
                 for(int j=0;j<grandchildren.getLength();j++)
                 {
@@ -189,7 +190,7 @@ public class IO_for_Client {
 
         return client;
     }
-    public int Update(String id,Client client) throws IOException, ParserConfigurationException, SAXException {
+    public int Update(String id,Client client) throws IOException, ParserConfigurationException, SAXException, XPathExpressionException {
         NodeList children = root.getChildNodes();
         for(int i=0;i<children.getLength();i++)
         {
@@ -292,7 +293,7 @@ public class IO_for_Client {
                                     }
                             case "My_Classes" ->
                                     {
-                                        NodeList great_grandchildren = grandchild.getChildNodes();
+                                        /*NodeList great_grandchildren = grandchild.getChildNodes();
                                         for(int k=0;j<great_grandchildren.getLength();k++)
                                         {
                                             Node great_grandchild = great_grandchildren.item(j);
@@ -302,21 +303,36 @@ public class IO_for_Client {
                                                 String text = textNode.getData().trim();
                                                 IO_for_Class io = new IO_for_Class();
                                                 client.addClasses(io.Read(text));
+
+                                            }
+                                        }*/
+                                        IO_for_Client io1 = new IO_for_Client();
+                                        Client client1 = new Client();
+                                        client1 = io1.Read(client1.getId());
+                                        for(int k=0;k<client.My_Classes.size();k++)
+                                        {
+                                            if(!client1.My_Classes.contains(client.getAClass(k)))
+                                            {
+                                                Text textnode = doc.createTextNode(client.getAClass(k).id);
+                                                Node great_grandchild = grandchildElement.appendChild(textnode);
+                                                var great_grandchildELement = (Element) great_grandchild;
+                                                great_grandchildELement.setAttribute("id",client.getAClass(k).id);
                                             }
                                         }
                                     }
                             case "My_Live"  ->
                                     {
-                                        NodeList great_grandchildren = grandchild.getChildNodes();
-                                        for(int k=0;j<great_grandchildren.getLength();j++)
+                                        IO_for_Client io1 = new IO_for_Client();
+                                        Client client1 = new Client();
+                                        client1 = io1.Read(client1.getId());
+                                        for(int k=0;k<client.My_Lives.size();k++)
                                         {
-                                            Node great_grandchild = great_grandchildren.item(j);
-                                            if( great_grandchild instanceof Element)
+                                            if(!client1.My_Lives.contains(client.getALive(k)))
                                             {
-                                                var textNode = (Text)grandchild.getFirstChild();
-                                                String text = textNode.getData().trim();
-                                                IO_for_Live io = new IO_for_Live();
-                                                client.addLives(io.Read(text));
+                                                Text textnode = doc.createTextNode(client.getALive(k).id);
+                                                Node great_grandchild = grandchildElement.appendChild(textnode);
+                                                var great_grandchildELement = (Element) great_grandchild;
+                                                great_grandchildELement.setAttribute("id",client.getAClass(k).id);
                                             }
                                         }
                                     }
