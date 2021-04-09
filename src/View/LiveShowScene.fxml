@@ -15,12 +15,12 @@
                   <Font size="29.0" />
                </font>
             </Label>
-            <Label layoutX="114.0" layoutY="35.0" prefHeight="42.0" prefWidth="57.0" text="Day">
+            <Label layoutX="108.0" layoutY="35.0" prefHeight="42.0" prefWidth="57.0" text="Day">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label fx:id="dayShowLabel" layoutX="172.0" layoutY="35.0" prefHeight="42.0" prefWidth="67.0">
+            <Label fx:id="dayLabel" layoutX="172.0" layoutY="35.0" prefHeight="42.0" prefWidth="67.0">
                <font>
                   <Font size="30.0" />
                </font>
@@ -29,5 +29,6 @@
       </AnchorPane>
       <Circle fx:id="circle" fill="#e4e4e4" layoutX="200.0" layoutY="209.0" radius="91.0" stroke="BLACK" strokeType="INSIDE" />
       <Polygon fx:id="triangle" fill="WHITE" layoutX="200.0" layoutY="219.0" points="-33.199981689453125, 33.00001525878906, 54.000030517578125, -8.599990844726562, -33.199981689453125, -54.99998474121094" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="urlLabel" layoutX="89.0" layoutY="88.0" prefHeight="15.0" prefWidth="264.0" text="Label" />
    </children>
 </AnchorPane>

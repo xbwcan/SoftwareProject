@@ -42,7 +42,10 @@
                                     <Font size="18.0" />
                                  </font>
                               </Label>
-                              <TextArea fx:id="mainPageOverviewText" prefHeight="332.0" prefWidth="238.0" />
+                              <TextArea fx:id="mainPageOverviewText" editable="false" prefHeight="332.0" prefWidth="238.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></TextArea>
                            </children>
                         </VBox>
                         <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="134.0" prefWidth="450.0">
@@ -136,7 +139,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="270.0" layoutY="41.0" prefHeight="15.0" prefWidth="186.0" text="Panzheng">
+                        <Label fx:id="myAccountUserNameLabel" layoutX="270.0" layoutY="41.0" prefHeight="15.0" prefWidth="186.0" text="Panzheng">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -282,7 +285,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="premierDiscountPriceLable" layoutX="599.0" layoutY="260.0" prefHeight="32.0" prefWidth="106.0" textFill="#006b20">
+                        <Label fx:id="premierDiscountPriceLabel" layoutX="599.0" layoutY="260.0" prefHeight="32.0" prefWidth="106.0" textFill="#006b20">
                            <font>
                               <Font size="24.0" />
                            </font>

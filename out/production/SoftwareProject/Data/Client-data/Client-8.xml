@@ -5,7 +5,7 @@
     <E_mail>stupidshinji@qwe.com</E_mail>
     <Weight>45</Weight>
     <Height>157</Height>
-    <BMI>18</BMI>
+    <BMI>18.2</BMI>
     <Fatty_Lipase>8</Fatty_Lipase>
     <sex>female</sex>
     <Age>14</Age>
@@ -28,8 +28,8 @@
     </Rank_End_Time>
     <State>active</State>
     <Generic_Plan></Generic_Plan>
-    <My_Classes>
-        <class id="01">Class-8</class>
-    </My_Classes>
+    <My_Class>
+        Class-8
+    </My_Class>
     <My_Live></My_Live>
 </Client>

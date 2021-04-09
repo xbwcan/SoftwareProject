@@ -1,5 +1,6 @@
 package View;
 
+import Model.Control;
 import Model.IO_for_Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,7 @@ public class LoginController {
 
         String name = nameTextField.getText();
         String password = passwordTextField.getText();
-       // Model.IO_for_Client clientIO = new IO_for_Client();
+        Model.Control con = new Control();
        if(true){
 
            FXMLLoader loader = new FXMLLoader();
@@ -35,8 +36,10 @@ public class LoginController {
            window.setScene(afterLoginScene);
            ClientMainSceneController controller = loader.getController();
            afterLoginScene.setUserData(controller);
-           //controller.client = clientIO.Read(name);
+           controller.client = con.ReadClient(name);
            controller.buildScene();
+           controller.id = name;
+           //System.out.println(controller.client.getName());
            window.show();
        }
 
