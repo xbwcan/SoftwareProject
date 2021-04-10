@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Class>
+<Classes>
     <Class id="01">
     <Trainer>Caesar Anthonio Zeppeli</Trainer>
     <State>active</State>
@@ -737,4 +737,4 @@
         </Day_Plans>
     </Day_Plan>
     </Class>
-</Class>
+</Classes>

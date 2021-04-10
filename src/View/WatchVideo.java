@@ -18,7 +18,8 @@ public class WatchVideo {
     public Circle circle;
     public Label video;
     public Polygon triangle;
-    public Scene previousScene;
-    public Label videoNumber;
+    public Label dayLabel;
+    public Label urlLabel;
+    public String url;
 
 }

@@ -29,7 +29,7 @@
       </TabPane>
       <DatePicker fx:id="datePicker" layoutX="37.0" layoutY="536.0" promptText="pick a date for your live session" />
       <ChoiceBox fx:id="timePicker" layoutX="228.0" layoutY="536.0" prefHeight="23.0" prefWidth="186.0" />
-      <Button fx:id="subscribeButton" layoutX="34.0" layoutY="141.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="163.0" text="Subscribe ">
+      <Button fx:id="subscribeButton" layoutX="34.0" layoutY="141.0" mnemonicParsing="false" onAction="#subscribeButtonClicked" prefHeight="23.0" prefWidth="163.0" text="Subscribe ">
          <font>
             <Font size="18.0" />
          </font>
@@ -39,14 +39,14 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="421.0" layoutY="455.0" mnemonicParsing="false" onAction="#goLiveButtonClicked" prefHeight="102.0" prefWidth="378.0" text="Goto Live Session" textAlignment="RIGHT">
+      <Button layoutX="421.0" layoutY="535.0" mnemonicParsing="false" onAction="#goLiveButtonClicked" prefHeight="52.0" prefWidth="378.0" text="Goto Live Session" textAlignment="RIGHT">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <VBox alignment="TOP_CENTER" layoutX="421.0" layoutY="165.0" prefHeight="285.0" prefWidth="404.0">
+      <VBox alignment="TOP_CENTER" layoutX="421.0" layoutY="165.0" prefHeight="333.0" prefWidth="404.0">
          <children>
-            <Label text="Daily Plan">
+            <Label text="Personal Plan">
                <font>
                   <Font size="18.0" />
                </font>
@@ -56,7 +56,7 @@
                   <TextArea fx:id="personalPlanTextArea" prefHeight="200.0" prefWidth="423.0" />
                </content>
             </ScrollPane>
-            <TextArea prefHeight="58.0" prefWidth="404.0" text="Live for this seeesion has been booked.&#10;Live URL: xxx.">
+            <TextArea fx:id="liveInfoText" prefHeight="113.0" prefWidth="404.0" text="Live for this seeesion has been booked.&#10;Live URL: xxx.">
                <font>
                   <Font size="18.0" />
                </font>
@@ -64,16 +64,31 @@
          </children>
       </VBox>
       <Button layoutX="-11.0" layoutY="-1.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="30.0" prefWidth="95.0" text="Go Back" />
-      <Label fx:id="liveSessionNameLabel" layoutX="95.0" layoutY="45.0" prefHeight="23.0" prefWidth="232.0" text="Live Session Name: xxx">
+      <Label fx:id="liveSessionNameLabel" layoutX="183.0" layoutY="17.0" prefHeight="24.0" prefWidth="186.0" text="Live Session Name: ">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="liveBookingLabel" layoutX="366.0" layoutY="45.0" text="\$5/Live Booking">
+      <Label fx:id="priceLabel" layoutX="125.0" layoutY="53.0" prefHeight="24.0" prefWidth="59.0" textAlignment="RIGHT">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Button layoutX="228.0" layoutY="563.0" mnemonicParsing="false" onAction="#bookbuttonClicked" prefHeight="23.0" prefWidth="186.0" text="Book Live Now" />
+      <Label fx:id="priceLabel1" layoutX="183.0" layoutY="53.0" prefHeight="24.0" prefWidth="153.0" text="\$/Subscription">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="discountPriceLabel" layoutX="124.0" layoutY="95.0" prefHeight="24.0" prefWidth="59.0" textAlignment="RIGHT" textFill="#00861d">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="95.0" prefHeight="15.0" prefWidth="133.0" text="for Premier" textFill="#046f09">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

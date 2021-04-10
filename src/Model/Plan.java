@@ -74,4 +74,13 @@ public class Plan {
                 ", End_time=" + End_time +
                 '}';
     }
+
+    /**
+     * Added by PZ
+     * @return
+     */
+    public String getPlan(){
+        String s = new String("Sport: " + Sport + "\n"+"Times: "+Times+"\n"+"Start_time: "+Start_time+"\n"+"End_Time: "+End_time);
+        return s;
+    }
 }

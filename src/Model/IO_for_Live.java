@@ -114,8 +114,9 @@ public class IO_for_Live {
             Live course = new Live();
             if (child instanceof Element) {
                 var childElement = (Element) child;
-
+                course.setId(childElement.getAttribute("id"));
                 NodeList grandchildren = child.getChildNodes();
+               // System.out.println(grandchildren.getLength());
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
 
@@ -172,9 +173,9 @@ public class IO_for_Live {
                             }
                         }
                     }
-                }
+                }list.add(course);
             }
-            list.add(course);
+
         }
         return list;
     }

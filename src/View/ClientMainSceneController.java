@@ -1,5 +1,8 @@
 package View;
 
+import Model.Class;
+import Model.Control;
+import Model.Live;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -17,8 +20,11 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 
 import javafx.application.Application;
+import org.xml.sax.SAXException;
 
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -58,10 +64,18 @@ public class ClientMainSceneController {
     public Label Off;
     public Label discountRatio;
     public Button buy;
+    public ComboBox monthChoiceBox;
+    public Label premierDiscountPriceLabel;
+    public Label premierOriginalPriceLabel;
+    public Label myAccountUserNameLabel;
+
+    public Model.Client client;
+    public String id;
+
 
     // public Label premiumLabel;
     @FXML
-    public void initialize(){
+    public void initialize() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         for(int i=8;i<=100;i++)
             myAccountAgeField.getItems().add(i);
         myAccountAgeField.setValue(20);
@@ -88,13 +102,27 @@ public class ClientMainSceneController {
         group1.selectToggle(mainPageClassButton);
         group2.selectToggle(myClassClassButton);
 
-        updateClassesInMainPage();
-        updateClassesInMyClass();
 
         updateNotice();
+
+        discountRatio.setText("10%");
+        for(int i=1;i<=12;i++)
+            monthChoiceBox.getItems().add(i);
     }
 
-    public void updateClassesInMainPage(){
+    public void buildScene() throws SAXException, ParserConfigurationException, XPathExpressionException, IOException {
+        myAccountAgeField.setValue(client.getAge());
+        myAccountWeightField.setText(""+client.getWeight());
+        myAccountHeightField.setText(""+client.getHeight());
+        myAccountBMIField.setText(""+client.getBMI());
+        myAccountFattyField.setText(""+client.getFatty_Lipase());
+        updateClassesInMainPage();
+        updateClassesInMyClass();
+        myAccountUserNameLabel.setText(client.getName());
+        premiumLabel.setText(client.getRank()==0?"Normal":"Premium");
+    }
+
+    public void updateClassesInMainPage() throws IOException, SAXException, ParserConfigurationException {
         mainPageFlowPane.getChildren().clear();
         ArrayList<Button> buttons;
         if(group1.getSelectedToggle().getUserData().equals("class"))
@@ -105,7 +133,7 @@ public class ClientMainSceneController {
             mainPageFlowPane.getChildren().add(button);
     }
 
-    public void updateClassesInMyClass(){
+    public void updateClassesInMyClass() throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
         myClassFlowPane.getChildren().clear();
         ArrayList<Button> buttons;
         if(group2.getSelectedToggle().getUserData().equals("class"))
@@ -140,8 +168,9 @@ public class ClientMainSceneController {
 
 
             ClassSceneController controller = loader.getController();
-            Course course = (Course)(((Node) actionEvent.getSource()).getUserData());
-            controller.course = course;
+            Model.Class course = (Model.Class)(((Node) actionEvent.getSource()).getUserData());
+            controller.setCourse(course);
+            controller.setClient(client);
             controller.previousScene = ((Node)actionEvent.getSource()).getScene();
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
@@ -154,7 +183,7 @@ public class ClientMainSceneController {
 
     EventHandler<ActionEvent> liveButtonClieked = new EventHandler<ActionEvent>() {
         /**
-         * this function change to the course page according to the class button clicked.
+         * this function change to the live page according to the class button clicked.
          * @param actionEvent
          */
         @Override
@@ -172,8 +201,9 @@ public class ClientMainSceneController {
             Scene classScene = new Scene(classSceneParent);
             Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             LiveSceneController controller = loader.getController();
-            controller.course = (Course) (((Node)actionEvent.getSource()).getUserData());
+            controller.live = (Live) (((Node)actionEvent.getSource()).getUserData());
             controller.previousScene = ((Node)actionEvent.getSource()).getScene();
+            controller.setClient(client);
             window.setScene(classScene);
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
@@ -188,14 +218,16 @@ public class ClientMainSceneController {
     /**
      * This method return a set of class buttons for Main pages.
      * details needed to be added --PZ
+     * details added at 4.9 1412 --PZ
      * @return
      */
-    public ArrayList<Button> getClassesButtonsForMainPage() {
+    public ArrayList<Button> getClassesButtonsForMainPage() throws ParserConfigurationException, SAXException, IOException {
         ArrayList<Button> buttons =new ArrayList<Button>();
-
-        for(int i=0;i<20;i++){
-            Button button = new Button("Class: "+i);
-            button.setPrefSize(120,120);
+        Control controller = new Control();
+        ArrayList <Model.Class> classes = controller.ShowAllClasses();
+        for(Model.Class course :classes){
+            Button button = new Button();
+            button.setPrefSize(160,160);
             //mainPageFlowPane.getChildren().add(button);
             button.setOnAction(classButtonClicked);
 
@@ -204,17 +236,14 @@ public class ClientMainSceneController {
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent e) {
-                            mainPageOverviewText.setText(((Course)button.getUserData()).getIntro());;
+                            mainPageOverviewText.setText(((Model.Class)button.getUserData()).getInfo());;
                         }
                     });
 
-            ArrayList <String> plan = new ArrayList<String>();
-            plan.add("Day1's plan.");
-            plan.add("Day2's plan.");
-            plan.add("Day3's:plan");
-            Course course = new Course("Class "+i,"PZ",2,plan);
 
+            
             button.setUserData(course);//add course object to object
+            button.setText("Trainner: "+course.getTrainer()+"\n"+course.getInfo());
             buttons.add(button);
 
         }
@@ -223,14 +252,17 @@ public class ClientMainSceneController {
     /**
      * This method return a set of class buttons for myClass pages.
      * details needed to be added --PZ
+     * not usable for id Issue
      * @return
      */
-    public ArrayList<Button> getClassesButtonsForMyClass() {
+    public ArrayList<Button> getClassesButtonsForMyClass() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         ArrayList<Button> buttons =new ArrayList<Button>();
-
-        for(int i=0;i<20;i++){
-            Button button = new Button("MyClass: "+i);
-            button.setPrefSize(120,120);
+        Control controller = new Control();
+        ArrayList <Model.Class> classes = controller.showClientClasses(client.getId());//HERE
+        //System.out.println(classes.size());
+        for(Model.Class course :classes){
+            Button button = new Button();
+            button.setPrefSize(160,160);
             //mainPageFlowPane.getChildren().add(button);
             button.setOnAction(classButtonClicked);
 
@@ -239,17 +271,14 @@ public class ClientMainSceneController {
                     new EventHandler<MouseEvent>() {
                         @Override
                         public void handle(MouseEvent e) {
-                            myClassOverviewText.setText(((Course)button.getUserData()).getIntro());;
+                            mainPageOverviewText.setText(((Model.Class)button.getUserData()).getInfo());;
                         }
                     });
 
-            ArrayList <String> plan = new ArrayList<String>();
-            plan.add("Day1's plan.");
-            plan.add("Day2's plan.");
-            plan.add("Day3's:plan");
-            Course course = new Course("Class "+i,"PZ",2,plan);
+
 
             button.setUserData(course);//add course object to object
+            button.setText("Trainner: "+course.getTrainer()+"\n"+course.getInfo());
             buttons.add(button);
 
         }
@@ -260,68 +289,63 @@ public class ClientMainSceneController {
      * details needed to be added --PZ
      * @return
      */
-    public ArrayList<Button> getLiveButtonsForMyClass() {
-        {
-            ArrayList<Button> buttons =new ArrayList<Button>();
+    public ArrayList<Button> getLiveButtonsForMyClass() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
 
-            for(int i=0;i<20;i++){
-                Button button = new Button("MyLive: "+i);
-                button.setPrefSize(120,120);
+            ArrayList<Button> buttons =new ArrayList<Button>();
+            Control controller = new Control();
+            ArrayList <Model.Live> lives = controller.showClientLives(client.getId());
+            for(Live live : lives){
+                Button button = new Button();
+                button.setPrefSize(160,160);
                 //mainPageFlowPane.getChildren().add(button);
                 button.setOnAction(liveButtonClieked);
                 button.addEventHandler(MouseEvent.MOUSE_ENTERED,
                         new EventHandler<MouseEvent>() {
                             @Override
                             public void handle(MouseEvent e) {
-                                myClassOverviewText.setText(((Course)button.getUserData()).getIntro());
+                                mainPageOverviewText.setText(((Model.Live)button.getUserData()).getInfo());;
                             }
                         });
 
-                ArrayList <String> plan = new ArrayList<String>();
-                plan.add("Day1's plan.");
-                plan.add("Day2's plan.");
-                plan.add("Day3's:plan");
-                Course course = new Course("Live Session "+i,"PZ",2,plan);
-                button.setUserData(course);
+
+                button.setUserData(live);
+                button.setText("Trainner: "+live.getTrainer()+"\n"+live.getInfo());
                 buttons.add(button);
 
             }
             return buttons;
-        }
+
     }
     /**
      * This method return a set of live buttons for Main pages.
      * details needed to be added --PZ
+     * added at 4.9 --PZ
      * @return
      */
-    public ArrayList<Button> getLiveButtonsForMainPage() {
-        {
-            ArrayList<Button> buttons =new ArrayList<Button>();
+    public ArrayList<Button> getLiveButtonsForMainPage() throws ParserConfigurationException, SAXException, IOException {
+        ArrayList<Button> buttons =new ArrayList<Button>();
+        Control controller = new Control();
+        ArrayList <Model.Live> lives = controller.ShowAllLives();
+        for(Live live : lives){
+            Button button = new Button();
+            button.setPrefSize(160,160);
+            //mainPageFlowPane.getChildren().add(button);
+            button.setOnAction(liveButtonClieked);
+            button.addEventHandler(MouseEvent.MOUSE_ENTERED,
+                    new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent e) {
+                            mainPageOverviewText.setText(((Model.Live)button.getUserData()).getInfo());;
+                        }
+                    });
 
-            for(int i=0;i<20;i++){
-                Button button = new Button("Live: "+i);
-                button.setPrefSize(120,120);
-                //mainPageFlowPane.getChildren().add(button);
-                button.setOnAction(liveButtonClieked);
-                button.addEventHandler(MouseEvent.MOUSE_ENTERED,
-                        new EventHandler<MouseEvent>() {
-                            @Override
-                            public void handle(MouseEvent e) {
-                                mainPageOverviewText.setText(((Course)button.getUserData()).getIntro());
-                            }
-                        });
 
-                ArrayList <String> plan = new ArrayList<String>();
-                plan.add("Day1's plan.");
-                plan.add("Day2's plan.");
-                plan.add("Day3's:plan");
-                Course course = new Course("Live Session "+i,"PZ",2,plan);
-                button.setUserData(course);
-                buttons.add(button);
+            button.setUserData(live);
+            button.setText("Trainner: "+live.getTrainer()+"\n"+live.getInfo());
+            buttons.add(button);
 
-            }
-            return buttons;
         }
+        return buttons;
     }
 
 
@@ -342,6 +366,9 @@ public class ClientMainSceneController {
         Scene changeEmailScene = new Scene(changeEmailParent);
 
         stage.setScene(changeEmailScene);
+        ChangeEmailScene controller = loader.getController();
+        controller.client = client;
+        controller.id =id;
 
         stage.show();
     }
@@ -372,7 +399,7 @@ public class ClientMainSceneController {
      * this method get what lessons and types user choose, and show them. It's in MainPage.
      * @param actionEvent
      */
-    public void mainPageSearchClicked(ActionEvent actionEvent) {
+    public void mainPageSearchClicked(ActionEvent actionEvent) throws ParserConfigurationException, SAXException, IOException {
         updateClassesInMainPage();
     }
 
@@ -381,27 +408,35 @@ public class ClientMainSceneController {
      * this method get what lessons and types user choose, and show them. It's in MyClasses&Live.
      * @param actionEvent
      */
-    public void myClassSearchClicked(ActionEvent actionEvent) {
+    public void myClassSearchClicked(ActionEvent actionEvent) throws SAXException, ParserConfigurationException, XPathExpressionException, IOException {
         updateClassesInMyClass();
     }
 
-    public void payment(ActionEvent actionEvent) throws IOException {
+    public void premierBuyClicked(ActionEvent actionEvent) throws IOException {
+        Integer month = (Integer) (monthChoiceBox.getValue());
+        changeToPayment("Premier for "+month+" month",premierDiscountPriceLabel.getText());
+
+    }
+    public void premierMonthSelected() throws IOException {
+        Integer month = (Integer) (monthChoiceBox.getValue());
+        //System.out.println(month);
+        double originPrice = month * 50;
+        double discountPrice = month * 50 * (1-0.1);
+        premierOriginalPriceLabel.setText(originPrice+" $ ");
+        premierDiscountPriceLabel.setText(discountPrice+" $ ");
+    }
+
+    public void changeToPayment(String item,String price) throws IOException {
         Stage stage = new Stage();
-
-
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Payment.fxml"));
         Parent PaymentParent = loader.load();
         Scene PaymentScene = new Scene(PaymentParent);
-
         stage.setScene(PaymentScene);
-
+        Payment controller = loader.getController();
+        controller.buildScene(item,price);
         stage.show();
     }
-    /**
-     *
-     * 1351
-     */
 
 
 

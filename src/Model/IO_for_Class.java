@@ -97,7 +97,7 @@ public class IO_for_Class {
                 if (!ID.equals(id))
                     continue;
                 course.setId(ID);
-
+                System.out.println(course.getId()+"xxx");
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -168,7 +168,7 @@ public class IO_for_Class {
             Class course = new Class();
             if (child instanceof Element) {
                 var childElement = (Element) child;
-
+                course.setId(childElement.getAttribute("id"));
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -226,9 +226,9 @@ public class IO_for_Class {
                             }
                         }
                     }
-                }
+                }list.add(course);
             }
-            list.add(course);
+
         }
         return list;
     }
