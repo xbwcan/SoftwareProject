@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ClassSceneController">
    <children>
-      <Label fx:id="price" layoutX="537.0" layoutY="44.0" prefHeight="24.0" prefWidth="41.0">
+      <Label fx:id="price" layoutX="495.0" layoutY="43.0" prefHeight="24.0" prefWidth="67.0">
          <font>
             <Font size="18.0" />
          </font></Label>
@@ -37,7 +37,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Label fx:id="forsingle" layoutX="584.0" layoutY="43.0" prefHeight="24.0" prefWidth="206.0" text="\$ for single subscribtion">
+      <Label fx:id="forsingle" layoutX="565.0" layoutY="43.0" prefHeight="24.0" prefWidth="217.0" text="\$ for single subscribtion">
          <font>
             <Font size="18.0" />
          </font>
