@@ -79,6 +79,17 @@ public class Control {
         Client user = io1.Read(userid);
         IO_for_Class io2 =new IO_for_Class();
         user.addClasses(io2.Read(id));
+        //System.out.println(io2.Read(id).getId()+"xxxxxxxx");
+        return io1.Update(userid,user);
+    }
+
+    public int AddLive(String userid, String id) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
+        IO_for_Client io1 = new IO_for_Client();
+        Client user = io1.Read(userid);
+
+        IO_for_Live io2 =new IO_for_Live();
+        user.addLives(io2.Read(id));
+        System.out.println(user.getMy_Lives().size());
         return io1.Update(userid,user);
     }
 

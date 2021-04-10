@@ -1,5 +1,7 @@
 package View;
 
+import Model.Client;
+import Model.Control;
 import Model.Live;
 import Model.Plan;
 import javafx.event.ActionEvent;
@@ -21,13 +23,14 @@ public class LiveSceneController {
     public DatePicker datePicker;
     public ChoiceBox timePicker;
     public Tab introTag;
-    public Live live;//should be Live Session
+
     public TabPane tabPane;
     public Scene previousScene;
     public Label discountPriceLabel;
     public Label priceLabel;
     public TextArea liveInfoText;
-
+    public Live live;//should be Live Session
+    public Client client;
     @FXML
     public void initialize() {
         timePicker.getItems().add("8:00 am ~ 10:00 am");
@@ -36,6 +39,8 @@ public class LiveSceneController {
         timePicker.getItems().add("15:00 pm ~ 17:00 pm");
         timePicker.setValue(timePicker.getItems().get(0));
     }
+    public void setLive(Live live){this.live=live;}
+    public void setClient(Client client){this.client = client;}
     public void buildScene() throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
@@ -124,8 +129,10 @@ public class LiveSceneController {
      * go to payment window.
      * @param actionEvent
      */
-    public void subscribeButtonClicked(ActionEvent actionEvent) throws IOException {
+    public void subscribeButtonClicked(ActionEvent actionEvent) throws IOException, XPathExpressionException, SAXException, ParserConfigurationException {
         changeToPayment(live.getInfo(),live.getPrice()+"$");
+        Model.Control control = new Control();
+        control.AddLive(client.getId(),live.getId());
     }
     public void changeToPayment(String item,String price) throws IOException {
         Stage stage = new Stage();

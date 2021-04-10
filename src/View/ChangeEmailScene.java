@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 
 public class ChangeEmailScene {
@@ -32,7 +33,7 @@ public class ChangeEmailScene {
      * This function is called OkButtonclicked, it is clicked once user want to change their e-mail.After being clicked,the new e-mail will replace original data and jump to the success interface.
      * @param actionEvent
      */
-    public void OkButtonclicked(ActionEvent actionEvent) throws IOException, ParserConfigurationException, SAXException {
+    public void OkButtonclicked(ActionEvent actionEvent) throws IOException, ParserConfigurationException, SAXException, XPathExpressionException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("SuccessScene.fxml"));
         Parent afterChangeEmailParent = loader.load();

@@ -1,5 +1,7 @@
 package View;
 
+import Model.Client;
+import Model.Control;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -24,15 +26,18 @@ public class ClassSceneController {
     public Button watchVideo;
     public Button delete;
     public Button subscibe;
-    public Model.Class course;
+
     public Scene previousScene;
     public Label accountType;
     public Label price;
     public Label nameLabel;
+    public Model.Client client;
+    public Model.Class course;
 
     public void setCourse(Model.Class course){
         this.course = course;
     }
+    public void setClient(Client client) {this.client = client;}
     public void buildScene() throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
@@ -91,8 +96,11 @@ public class ClassSceneController {
         stage.show();
     }
 
-    public void Payment(ActionEvent actionEvent) throws IOException {
+    public void Payment(ActionEvent actionEvent) throws IOException, XPathExpressionException, SAXException, ParserConfigurationException {
         changeToPayment(course.getInfo(),course.getPrice()+"$");
+        Model.Control control = new Control();
+        control.AddClass(client.getId(),course.getId());
+        //System.out.println("inPayment: "+course.getId());
     }
 
     public void changeToPayment(String item,String price) throws IOException {
@@ -106,4 +114,6 @@ public class ClassSceneController {
         controller.buildScene(item,price);
         stage.show();
     }
+
+
 }

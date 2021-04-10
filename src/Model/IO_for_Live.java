@@ -43,6 +43,7 @@ public class IO_for_Live {
                 String ID = childElement.getAttribute("id");
                 if (!ID.equals(id))
                     continue;
+                live.setId(id);
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -113,65 +114,68 @@ public class IO_for_Live {
             Live course = new Live();
             if (child instanceof Element) {
                 var childElement = (Element) child;
-
+                course.setId(childElement.getAttribute("id"));
                 NodeList grandchildren = child.getChildNodes();
+               // System.out.println(grandchildren.getLength());
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
 
                     if (grandchild instanceof Element) {
                         var grandchildElement = (Element) grandchild;
                         switch (grandchildElement.getTagName().trim()) {
-                            case "Trainer" -> {
+                            case "Trainer" ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setTrainer(text);
                             }
-                            case "State" -> {
+                            case "State"  ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setState(text);
                             }
-                            case "Info" -> {
+                            case "Info"    ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setInfo(text);
                             }
-                            case "Type" -> {
+                            case "Type"     ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setType(text);
                             }
-                            case "Rate_of_Process" -> {
+                            case "Rate_of_Process" ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setRate_of_Process(Integer.parseInt(text));
                             }
-                            case "Rank" -> {
+                            case "Rank" ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setRank(Integer.parseInt(text));
                             }
-                            case "Price" -> {
+                            case "Price" ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
                                 course.setPrice(Integer.parseInt(text));
                             }
-                            case "Day_Plans" -> {
+                            case "Day_Plans"->{
                                 NodeList great_grandchildren = grandchild.getChildNodes();
-                                for (int k = 0; k < great_grandchildren.getLength(); k++) {
+                                for(int k=0;k<great_grandchildren.getLength();k++)
+                                {
                                     Node great_grandchild = great_grandchildren.item(k);
-                                    if (great_grandchild instanceof Element) {
+                                    if(great_grandchild instanceof Element)
+                                    {
                                         var great_grandchildElement = (Element) great_grandchild;
-                                        IO_for_Plan io = new IO_for_Plan();
+                                        IO_for_Plan io =new IO_for_Plan();
                                         course.addDay_Plans(io.Read(great_grandchildElement.getAttribute("id")));
                                     }
                                 }
                             }
                         }
                     }
-                }
-                list.add(course);
+                }list.add(course);
             }
+
         }
         return list;
     }

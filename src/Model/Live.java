@@ -8,6 +8,7 @@ public class Live {
     int Rate_of_Process, Start_time, End_time;
     int price;
     int rank;
+    String id;
     ArrayList<Plan> Day_Plans = new ArrayList<Plan>();
 
     public Live(String trainer, String state, String info, String type,
@@ -121,5 +122,13 @@ public class Live {
 
     public void addDay_Plans(Plan p) {
         Day_Plans.add(p);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

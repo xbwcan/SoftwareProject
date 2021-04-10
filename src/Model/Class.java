@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Class {
 
     String Trainer, State, Info, Type, Video_Path;
+    String id;
     int Rate_of_Process;
     ArrayList<Plan> Day_Plans = new ArrayList<>();
     int price;
@@ -99,5 +100,13 @@ public class Class {
     public void addDay_Plans(Plan plan)
     {
         Day_Plans.add(plan);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

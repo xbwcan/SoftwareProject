@@ -170,6 +170,7 @@ public class ClientMainSceneController {
             ClassSceneController controller = loader.getController();
             Model.Class course = (Model.Class)(((Node) actionEvent.getSource()).getUserData());
             controller.setCourse(course);
+            controller.setClient(client);
             controller.previousScene = ((Node)actionEvent.getSource()).getScene();
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
@@ -202,6 +203,7 @@ public class ClientMainSceneController {
             LiveSceneController controller = loader.getController();
             controller.live = (Live) (((Node)actionEvent.getSource()).getUserData());
             controller.previousScene = ((Node)actionEvent.getSource()).getScene();
+            controller.setClient(client);
             window.setScene(classScene);
             try {
                 controller.buildScene();//build course scene dynamically according to the course information
@@ -239,7 +241,7 @@ public class ClientMainSceneController {
                     });
 
 
-
+            
             button.setUserData(course);//add course object to object
             button.setText("Trainner: "+course.getTrainer()+"\n"+course.getInfo());
             buttons.add(button);
@@ -256,7 +258,8 @@ public class ClientMainSceneController {
     public ArrayList<Button> getClassesButtonsForMyClass() throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         ArrayList<Button> buttons =new ArrayList<Button>();
         Control controller = new Control();
-        ArrayList <Model.Class> classes = controller.showClientClasses(client.getEmail());//HERE
+        ArrayList <Model.Class> classes = controller.showClientClasses(client.getId());//HERE
+        //System.out.println(classes.size());
         for(Model.Class course :classes){
             Button button = new Button();
             button.setPrefSize(160,160);
@@ -290,7 +293,7 @@ public class ClientMainSceneController {
 
             ArrayList<Button> buttons =new ArrayList<Button>();
             Control controller = new Control();
-            ArrayList <Model.Live> lives = controller.showClientLives(client.getEmail());
+            ArrayList <Model.Live> lives = controller.showClientLives(client.getId());
             for(Live live : lives){
                 Button button = new Button();
                 button.setPrefSize(160,160);
@@ -300,7 +303,7 @@ public class ClientMainSceneController {
                         new EventHandler<MouseEvent>() {
                             @Override
                             public void handle(MouseEvent e) {
-                                mainPageOverviewText.setText(((Model.Class)button.getUserData()).getInfo());;
+                                mainPageOverviewText.setText(((Model.Live)button.getUserData()).getInfo());;
                             }
                         });
 

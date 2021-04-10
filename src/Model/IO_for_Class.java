@@ -96,6 +96,8 @@ public class IO_for_Class {
                 String ID = childElement.getAttribute("id");
                 if (!ID.equals(id))
                     continue;
+                course.setId(ID);
+                System.out.println(course.getId()+"xxx");
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -158,26 +160,15 @@ public class IO_for_Class {
         }
         return course;
     }
-    /**
-     * @Author ZZ
-     * This method has been fixed by PZ at 4.9
-     * This method will show all classes from database
-     * @return
-     * @throws IOException
-     * @throws ParserConfigurationException
-     * @throws SAXException
-     */
     public ArrayList<Class> ShowAllClasses() throws ParserConfigurationException, IOException, SAXException {
         ArrayList<Class> list= new ArrayList<>();
         NodeList children = root.getChildNodes();
-
         for(int i=0;i<children.getLength();i++) {
             Node child = children.item(i);
             Class course = new Class();
             if (child instanceof Element) {
                 var childElement = (Element) child;
-                //System.out.println(childElement.getAttribute("id"));
-                //System.out.println(i);
+                course.setId(childElement.getAttribute("id"));
                 NodeList grandchildren = child.getChildNodes();
                 for (int j = 0; j < grandchildren.getLength(); j++) {
                     Node grandchild = grandchildren.item(j);
@@ -185,7 +176,6 @@ public class IO_for_Class {
                     if (grandchild instanceof Element) {
                         var grandchildElement = (Element) grandchild;
                         switch (grandchildElement.getTagName().trim()) {
-                            //case
                             case "Trainer" ->{
                                 var textNode = (Text) grandchild.getFirstChild();
                                 String text = textNode.getData().trim();
@@ -236,8 +226,7 @@ public class IO_for_Class {
                             }
                         }
                     }
-                }
-                list.add(course);
+                }list.add(course);
             }
 
         }
@@ -245,5 +234,6 @@ public class IO_for_Class {
     }
 
 
-
+    public void Update() {
+    }
 }
